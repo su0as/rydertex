@@ -17,7 +17,7 @@
   } catch (e) { /* no stored basket */ }
 
   if (basketIds.length) {
-    fetch('data/fabrics.json')
+    fetch('../data/fabrics.json')
       .then(function (r) { return r.json(); })
       .then(function (data) {
         var names = basketIds

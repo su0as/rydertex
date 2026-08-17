@@ -1,5 +1,5 @@
 User-agent: *
 Allow: /
-Disallow: /draft-status.html
+Disallow: /draft-status/
 
 Sitemap: https://su0as.github.io/rydertex/sitemap.xml

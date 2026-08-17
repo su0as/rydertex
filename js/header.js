@@ -3,13 +3,19 @@
 // nav + lang switch + CTA become a slide-over drawer behind a hamburger
 // button. Above it, .nav-panel is `display:contents` so this markup has
 // zero effect on the original desktop layout.
+//
+// Clean URLs: every page lives at /pagename/ except Home at the site
+// root, so this shared component needs to know how deep the current page
+// sits to link correctly. The mount element carries a data-base attribute
+// ("../" for nested pages, absent/"" for the root) set per-page in HTML.
 (function () {
   const mount = document.getElementById('site-header');
   if (!mount) return;
+  const base = mount.dataset.base || '';
 
   mount.innerHTML = `
     <header class="site-header" data-header>
-      <a href="index.html" class="logo" aria-label="Ryder Textiles — home">
+      <a href="${base}" class="logo" aria-label="Ryder Textiles — home">
         <span>Ryder</span>
         <span>Textiles</span>
       </a>
@@ -19,12 +25,12 @@
       <div class="nav-scrim" data-nav-scrim></div>
       <div class="nav-panel" id="nav-panel">
         <nav class="site-nav">
-          <a href="capabilities.html">Capabilities</a>
-          <a href="fabrics.html">Fabrics</a>
-          <a href="facilities.html">Facilities</a>
-          <a href="sustainability.html">Sustainability</a>
-          <a href="global.html">Global</a>
-          <a href="company.html">Company</a>
+          <a href="${base}capabilities/">Capabilities</a>
+          <a href="${base}fabrics/">Fabrics</a>
+          <a href="${base}facilities/">Facilities</a>
+          <a href="${base}sustainability/">Sustainability</a>
+          <a href="${base}global/">Global</a>
+          <a href="${base}company/">Company</a>
         </nav>
         <div class="header-right">
           <div class="lang-switch">
@@ -32,7 +38,7 @@
             <span class="lang-sep">/</span>
             <button type="button" class="lang-zh" title="中文 copy pending" disabled>中文</button>
           </div>
-          <a href="contact.html" class="header-cta">Request a sample</a>
+          <a href="${base}contact/" class="header-cta">Request a sample</a>
         </div>
       </div>
     </header>
@@ -44,9 +50,10 @@
   onScroll();
 
   // Mark the current page's nav link (desktop + drawer share the same markup).
-  const here = (location.pathname.split('/').pop() || 'index.html');
+  const currentPath = location.pathname.replace(/index\.html$/, '');
   mount.querySelectorAll('.site-nav a').forEach((a) => {
-    if (a.getAttribute('href') === here) a.classList.add('is-active');
+    const linkPath = new URL(a.getAttribute('href'), location.href).pathname;
+    if (linkPath === currentPath) a.classList.add('is-active');
   });
 
   // Mobile nav drawer.

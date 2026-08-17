@@ -1,7 +1,9 @@
 // Shared site footer. Ported from project/Site Footer.dc.html.
+// See js/header.js for the data-base convention (clean-URL nesting).
 (function () {
   const mount = document.getElementById('site-footer');
   if (!mount) return;
+  const base = mount.dataset.base || '';
 
   mount.innerHTML = `
     <footer class="site-footer">
@@ -11,7 +13,7 @@
             <circle cx="26" cy="26" r="24.5" stroke="#2F53E0" stroke-width="1.2"></circle>
             <circle cx="26" cy="26" r="1.6" fill="#2F53E0"></circle>
           </svg>
-          <img src="assets/rydertex-assets/07-derived/logo-rydertex-paper.png" alt="RyderTex — Changshu Ryder Textile Co., Ltd." width="1158" height="329" loading="lazy" class="footer-logo">
+          <img src="${base}assets/rydertex-assets/07-derived/logo-rydertex-paper.png" alt="RyderTex — Changshu Ryder Textile Co., Ltd." width="1158" height="329" loading="lazy" class="footer-logo">
           <p class="footer-sub">A subsidiary of<br>Landsun Textile Group</p>
         </div>
         <div class="footer-col">

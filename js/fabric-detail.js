@@ -5,8 +5,9 @@
 (function () {
   'use strict';
 
-  var A = 'assets/rydertex-assets/';
+  var A = '../assets/rydertex-assets/';
   var SWATCH_DIR = A + '07-derived/swatch-';
+  var ABS_SWATCH_DIR = 'https://su0as.github.io/rydertex/assets/rydertex-assets/07-derived/swatch-';
   var DEFAULT_ID = '02a-heather-jersey-cotton';
 
   // Family-level narrative + real (non-branded) end-use photos, ported from
@@ -116,7 +117,7 @@
         '@type': 'Product',
         name: f.name,
         description: meta.body,
-        image: 'https://su0as.github.io/rydertex/' + img,
+        image: ABS_SWATCH_DIR + f.familyId + '.png',
         category: f.structure,
         material: f.composition,
         brand: { '@type': 'Brand', name: 'RyderTex' },
@@ -130,7 +131,7 @@
         offers: {
           '@type': 'Offer',
           availability: 'https://schema.org/InStock',
-          url: 'https://su0as.github.io/rydertex/fabric-detail.html?fabric=' + f.id,
+          url: 'https://su0as.github.io/rydertex/fabric-detail/?fabric=' + f.id,
           priceSpecification: { '@type': 'PriceSpecification', description: 'Quoted per order — contact for pricing' }
         }
       });
@@ -152,7 +153,7 @@
     render();
   });
 
-  fetch('data/fabrics.json')
+  fetch('../data/fabrics.json')
     .then(function (r) { return r.json(); })
     .then(function (data) {
       FABRICS = data.fabrics;

@@ -6,7 +6,7 @@
   'use strict';
 
   var STORAGE_KEY = 'rt-sample-basket';
-  var SWATCH_DIR = 'assets/rydertex-assets/07-derived/swatch-';
+  var SWATCH_DIR = '../assets/rydertex-assets/07-derived/swatch-';
 
   var FILTER_DEFS = [
     { key: 'structure', label: 'Structure', values: function (f) { return [f.structure]; } },
@@ -145,7 +145,7 @@
     var img = SWATCH_DIR + f.familyId + '.png';
     return (
       '<article class="fabric-card">' +
-        '<a href="fabric-detail.html?fabric=' + esc(f.id) + '" class="fabric-card-link">' +
+        '<a href="../fabric-detail/?fabric=' + esc(f.id) + '" class="fabric-card-link">' +
           '<img src="' + esc(img) + '" alt="' + esc(f.family) + ' swatch — ' + esc(f.name) + '" width="900" height="700" loading="lazy" class="fabric-card-img">' +
         '</a>' +
         '<div class="fabric-card-body">' +
@@ -159,7 +159,7 @@
             '<button type="button" class="fabric-card-add' + (inBasket ? ' in-basket' : '') + '" data-add="' + esc(f.id) + '">' +
               (inBasket ? '✓ In sample request' : '+ Add to sample request') +
             '</button>' +
-            '<a href="fabric-detail.html?fabric=' + esc(f.id) + '" class="fabric-card-spec">Full spec sheet →</a>' +
+            '<a href="../fabric-detail/?fabric=' + esc(f.id) + '" class="fabric-card-spec">Full spec sheet →</a>' +
           '</div>' +
         '</div>' +
       '</article>'
@@ -234,7 +234,7 @@
     render();
   });
 
-  fetch('data/fabrics.json')
+  fetch('../data/fabrics.json')
     .then(function (r) { return r.json(); })
     .then(function (data) {
       FABRICS = data.fabrics;
@@ -243,7 +243,7 @@
       render();
     })
     .catch(function (err) {
-      els.grid.innerHTML = '<div class="no-results">Could not load the fabric catalogue. <a href="contact.html">Contact us</a> and we will send specs directly.</div>';
+      els.grid.innerHTML = '<div class="no-results">Could not load the fabric catalogue. <a href="../contact/">Contact us</a> and we will send specs directly.</div>';
       console.error('fabrics.json failed to load', err);
     });
 })();

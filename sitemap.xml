@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://su0as.github.io/rydertex/index.html</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
-  <url><loc>https://su0as.github.io/rydertex/fabrics.html</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://su0as.github.io/rydertex/fabric-detail.html</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://su0as.github.io/rydertex/capabilities.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://su0as.github.io/rydertex/facilities.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://su0as.github.io/rydertex/sustainability.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://su0as.github.io/rydertex/global.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://su0as.github.io/rydertex/company.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://su0as.github.io/rydertex/contact.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://su0as.github.io/rydertex/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://su0as.github.io/rydertex/fabrics/</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://su0as.github.io/rydertex/fabric-detail/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://su0as.github.io/rydertex/capabilities/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://su0as.github.io/rydertex/facilities/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://su0as.github.io/rydertex/sustainability/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://su0as.github.io/rydertex/global/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://su0as.github.io/rydertex/company/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://su0as.github.io/rydertex/contact/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
 </urlset>
