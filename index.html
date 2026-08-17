@@ -46,7 +46,7 @@
           <div class="marquee-set" aria-hidden="true"><span>55,000 sqm</span><span class="dot">·</span><span>300+ knitting machines</span><span class="dot">·</span><span>3 dye houses</span><span class="dot">·</span><span>100+ tonnes/day</span><span class="dot">·</span><span>11 export markets</span><span class="dot">·</span><span>20+ global brands</span><span class="dot">·</span><span>95% on-time</span><span class="dot">·</span><span>Est. 2003</span><span class="dot">·</span></div>
         </div>
       </div>
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(228px,1fr));padding:0 clamp(80px,9vw,170px)">
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(228px,1fr));padding:0 var(--gutter)">
         <div class="stat-tile-border reveal"><div class="n" data-countup="55000" data-comma="1">0</div><div style="margin-top:14px"><span class="label">Square metres · 3 factories</span></div></div>
         <div class="stat-tile-border reveal"><div class="n"><span data-countup="300">0</span><span class="accent">+</span></div><div style="margin-top:14px"><span class="label">Circular knitting machines</span></div></div>
         <div class="stat-tile-border reveal"><div class="n"><span data-countup="100">0</span><span class="accent">+</span></div><div style="margin-top:14px"><span class="label">Tonnes dyed per day · 3 houses</span></div></div>
@@ -147,7 +147,7 @@
     </section>
 
     <section id="fabrics" style="padding:clamp(80px,9vw,150px) 0">
-      <div class="section-head" style="padding:0 clamp(80px,9vw,170px)">
+      <div class="section-head" style="padding:0 var(--gutter)">
         <div>
           <div class="kicker">Fabric library</div>
           <h2 class="section-title">Twelve families<span class="accent">,</span> one mill</h2>
@@ -189,12 +189,12 @@
           <span>Machine</span><span>Gauge</span><span>Width</span>
           <div class="gauge-head-scale"><span>18</span><span>24</span><span>28</span><span>34</span><span>40 gg</span></div>
         </div>
-        <div class="gauge-row"><div class="name">Open Width</div><div class="gauge">28–40 GG</div><div class="width">34" / 38"</div><div class="gauge-bar-wrap"><div class="gauge-track"><div class="gauge-fill reveal" style="left:45.5%;width:54.5%"></div></div><div class="gauge-use">High-speed open-width knits · bulk active, sports, yoga</div></div></div>
-        <div class="gauge-row"><div class="name">Single Knit</div><div class="gauge">24–34 GG</div><div class="width">30" / 34" / 38"</div><div class="gauge-bar-wrap"><div class="gauge-track"><div class="gauge-fill reveal" style="left:27.3%;width:45.5%"></div></div><div class="gauge-use">Lightweight modal · absorbs 5× order spikes</div></div></div>
-        <div class="gauge-row"><div class="name">Double Knit</div><div class="gauge">18–38 GG</div><div class="width">30" / 34" / 38"</div><div class="gauge-bar-wrap"><div class="gauge-track"><div class="gauge-fill reveal" style="left:0%;width:90.9%"></div></div><div class="gauge-use">Dense interlock and rib · leisurewear · to 20,000 kg/day</div></div></div>
-        <div class="gauge-row"><div class="name">French Terry</div><div class="gauge">18–24 GG</div><div class="width">30" / 34"</div><div class="gauge-bar-wrap"><div class="gauge-track"><div class="gauge-fill reveal" style="left:0%;width:27.3%"></div></div><div class="gauge-use">Looped textures for activewear</div></div></div>
-        <div class="gauge-row"><div class="name">Jacquard</div><div class="gauge">18–24 GG</div><div class="width">34"</div><div class="gauge-bar-wrap"><div class="gauge-track"><div class="gauge-fill reveal" style="left:0%;width:27.3%"></div></div><div class="gauge-use">Patterned knits · body-mapping · custom branded structures</div></div></div>
-        <div class="gauge-row"><div class="name">Rib</div><div class="gauge">18 GG</div><div class="width">34" / 38"</div><div class="gauge-bar-wrap"><div class="gauge-track"><div class="gauge-fill reveal" style="left:0%;width:2%"></div></div><div class="gauge-use">Variegated designs · elastic bottoms, cuffs, trims</div></div></div>
+        <div class="gauge-row"><div class="name">Open Width</div><div class="gauge" data-label="Gauge">28–40 GG</div><div class="width" data-label="Width">34" / 38"</div><div class="gauge-bar-wrap"><div class="gauge-track"><div class="gauge-fill reveal" style="left:45.5%;width:54.5%"></div></div><div class="gauge-use">High-speed open-width knits · bulk active, sports, yoga</div></div></div>
+        <div class="gauge-row"><div class="name">Single Knit</div><div class="gauge" data-label="Gauge">24–34 GG</div><div class="width" data-label="Width">30" / 34" / 38"</div><div class="gauge-bar-wrap"><div class="gauge-track"><div class="gauge-fill reveal" style="left:27.3%;width:45.5%"></div></div><div class="gauge-use">Lightweight modal · absorbs 5× order spikes</div></div></div>
+        <div class="gauge-row"><div class="name">Double Knit</div><div class="gauge" data-label="Gauge">18–38 GG</div><div class="width" data-label="Width">30" / 34" / 38"</div><div class="gauge-bar-wrap"><div class="gauge-track"><div class="gauge-fill reveal" style="left:0%;width:90.9%"></div></div><div class="gauge-use">Dense interlock and rib · leisurewear · to 20,000 kg/day</div></div></div>
+        <div class="gauge-row"><div class="name">French Terry</div><div class="gauge" data-label="Gauge">18–24 GG</div><div class="width" data-label="Width">30" / 34"</div><div class="gauge-bar-wrap"><div class="gauge-track"><div class="gauge-fill reveal" style="left:0%;width:27.3%"></div></div><div class="gauge-use">Looped textures for activewear</div></div></div>
+        <div class="gauge-row"><div class="name">Jacquard</div><div class="gauge" data-label="Gauge">18–24 GG</div><div class="width" data-label="Width">34"</div><div class="gauge-bar-wrap"><div class="gauge-track"><div class="gauge-fill reveal" style="left:0%;width:27.3%"></div></div><div class="gauge-use">Patterned knits · body-mapping · custom branded structures</div></div></div>
+        <div class="gauge-row"><div class="name">Rib</div><div class="gauge" data-label="Gauge">18 GG</div><div class="width" data-label="Width">34" / 38"</div><div class="gauge-bar-wrap"><div class="gauge-track"><div class="gauge-fill reveal" style="left:0%;width:2%"></div></div><div class="gauge-use">Variegated designs · elastic bottoms, cuffs, trims</div></div></div>
       </div>
 
       <div class="photo-grid graded">
@@ -333,7 +333,7 @@
 
     <section id="sample" class="buyer-zone">
       <div class="buyer-zone-tag"><div class="kicker">Sample request</div><div class="flag">Inverted — buyer zone</div></div>
-      <div style="padding:clamp(56px,7vw,110px) clamp(80px,9vw,170px) clamp(70px,8vw,130px);display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:clamp(40px,5vw,90px);align-items:start">
+      <div style="padding:clamp(56px,7vw,110px) var(--gutter) clamp(70px,8vw,130px);display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:clamp(40px,5vw,90px);align-items:start">
         <div>
           <h2 style="margin:0;font-family:Archivo,sans-serif;font-weight:700;font-size:clamp(2.2rem,5.4vw,5.6rem);line-height:.9;letter-spacing:-.04em;color:#0D0E10;text-wrap:pretty">Send the spec<span class="accent">.</span> We send the fabric<span class="accent">.</span></h2>
           <p style="margin:26px 0 0;max-width:48ch;font-size:17px;line-height:1.55;color:#4A4F57;text-wrap:pretty">Samples are free. If you already import a comparable fabric, send the reference and we will quote against it.</p>

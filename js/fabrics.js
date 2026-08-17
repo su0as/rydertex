@@ -65,8 +65,25 @@
     basketItems: document.getElementById('basket-items'),
     searchInput: document.getElementById('search-input'),
     structureInputs: Array.prototype.slice.call(document.querySelectorAll('input[data-structure]')),
-    grid: document.getElementById('fabrics-grid')
+    grid: document.getElementById('fabrics-grid'),
+    filtersToggle: document.getElementById('filters-toggle'),
+    filtersActiveCount: document.getElementById('filters-active-count'),
+    filtersAside: document.getElementById('filters-aside'),
+    filtersAsideClose: document.getElementById('filters-aside-close'),
+    filtersScrim: document.getElementById('filters-scrim')
   };
+
+  function setFiltersOpen(open) {
+    els.filtersAside.classList.toggle('open', open);
+    els.filtersScrim.classList.toggle('open', open);
+    document.body.classList.toggle('nav-open', open);
+  }
+  els.filtersToggle.addEventListener('click', function () { setFiltersOpen(true); });
+  els.filtersAsideClose.addEventListener('click', function () { setFiltersOpen(false); });
+  els.filtersScrim.addEventListener('click', function () { setFiltersOpen(false); });
+  window.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') setFiltersOpen(false);
+  });
 
   var NO_RESULTS_HTML = '<div class="no-results">No family matches that combination. Clear the filters, or tell us the construction you need and we will quote it.</div>';
 
@@ -125,6 +142,7 @@
 
     els.basketCount.textContent = String(state.basket.length);
     els.basketPanel.hidden = !state.basketOpen;
+    els.filtersActiveCount.textContent = String(state.structures.length + (state.q.trim() ? 1 : 0));
 
     var basketItems = state.basket
       .map(function (id) { return FABRICS.find(function (f) { return f.id === id; }); })

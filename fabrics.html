@@ -26,10 +26,12 @@
     <div class="filter-bar">
       <div class="filter-bar-count">Showing <span id="shown-count" class="accent-text">12</span> of 12 families</div>
       <div class="filter-bar-actions">
+        <button type="button" id="filters-toggle" class="btn-ghost filters-toggle">Filters <span id="filters-active-count" class="count-badge">0</span></button>
         <button type="button" id="clear-filters" class="btn-ghost">Clear filters</button>
         <button type="button" id="toggle-basket" class="btn-primary">Sample request <span id="basket-count" class="count-badge">0</span></button>
       </div>
     </div>
+    <div id="filters-scrim" class="filters-scrim"></div>
 
     <div id="basket-panel" class="basket-panel" hidden>
       <div class="basket-header">
@@ -42,7 +44,8 @@
     </div>
 
     <section class="fabrics-section">
-      <aside class="filters-aside">
+      <aside id="filters-aside" class="filters-aside">
+        <button type="button" id="filters-aside-close" class="filters-aside-close btn-text">Close ✕</button>
         <div class="filter-group">
           <label for="search-input" class="filter-label">Search</label>
           <input type="search" id="search-input" placeholder="Family name" class="search-input">
