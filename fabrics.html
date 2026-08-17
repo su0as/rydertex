@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fabric Library — RyderTex | Knitted Fabrics from Changshu</title>
+<meta name="description" content="Filter RyderTex knitted fabric families by structure, composition, GSM, gauge, finish and certification. Build one consolidated swatch request.">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&family=Inter:wght@400;500&family=Noto+Sans+SC:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<div class="page-wrap">
+  <div class="scroll-rule" aria-hidden="true"><div class="scroll-rule-fill"></div></div>
+  <div class="noise-overlay" aria-hidden="true"></div>
+
+  <div id="site-header"></div>
+
+  <main class="main-content">
+    <section class="hero">
+      <div class="eyebrow">Fabric library</div>
+      <h1>Twelve families<span class="accent-comma">,</span> filtered</h1>
+      <p class="hero-sub">Every family below is knitted, dyed and finished in Changshu. Select the ones you want to feel, and send one consolidated swatch request instead of six emails.</p>
+    </section>
+
+    <div class="filter-bar">
+      <div class="filter-bar-count">Showing <span id="shown-count" class="accent-text">12</span> of 12 families</div>
+      <div class="filter-bar-actions">
+        <button type="button" id="clear-filters" class="btn-ghost">Clear filters</button>
+        <button type="button" id="toggle-basket" class="btn-primary">Sample request <span id="basket-count" class="count-badge">0</span></button>
+      </div>
+    </div>
+
+    <div id="basket-panel" class="basket-panel" hidden>
+      <div class="basket-header">
+        <span class="basket-title">Your swatch request</span>
+        <button type="button" id="close-basket" class="btn-text">Close</button>
+      </div>
+      <p id="basket-empty" class="basket-empty">Nothing selected yet — add families from the grid below.</p>
+      <div id="basket-items"></div>
+      <a href="contact.html" class="basket-send">Send this request →</a>
+    </div>
+
+    <section class="fabrics-section">
+      <aside class="filters-aside">
+        <div class="filter-group">
+          <label for="search-input" class="filter-label">Search</label>
+          <input type="search" id="search-input" placeholder="Family name" class="search-input">
+        </div>
+
+        <div class="filter-group structure-filters">
+          <div class="filter-group-title">Structure</div>
+          <label class="structure-option"><input type="checkbox" data-structure="Single knit">Single knit</label>
+          <label class="structure-option"><input type="checkbox" data-structure="Double knit">Double knit</label>
+          <label class="structure-option"><input type="checkbox" data-structure="Rib">Rib</label>
+          <label class="structure-option"><input type="checkbox" data-structure="Warp knit">Warp knit</label>
+          <label class="structure-option"><input type="checkbox" data-structure="Jacquard">Jacquard</label>
+          <label class="structure-option"><input type="checkbox" data-structure="Velour">Velour</label>
+          <label class="structure-option"><input type="checkbox" data-structure="Raised / brushed">Raised / brushed</label>
+          <label class="structure-option"><input type="checkbox" data-structure="Seersucker / crinkle">Seersucker / crinkle</label>
+          <label class="structure-option"><input type="checkbox" data-structure="Yarn-dye stripe">Yarn-dye stripe</label>
+        </div>
+
+        <div class="filter-group locked-filters">
+          <div class="filter-group-title">Locked until spec data lands</div>
+          <div class="locked-tags">
+            <span class="locked-tag">Composition</span>
+            <span class="locked-tag">GSM range</span>
+            <span class="locked-tag">Gauge</span>
+            <span class="locked-tag">Finish</span>
+            <span class="locked-tag">End use</span>
+            <span class="locked-tag">Certification</span>
+          </div>
+          <div class="needs-input">[[NEEDS INPUT: per-family GSM, gauge, composition, finish, end use and certification — these six filters go live the moment the data arrives]]</div>
+        </div>
+      </aside>
+
+      <div id="fabrics-grid" class="fabrics-grid"></div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+</div>
+
+<script src="js/header.js"></script>
+<script src="js/footer.js"></script>
+<script src="js/fabrics.js"></script>
+</body>
+</html>

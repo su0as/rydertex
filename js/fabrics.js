@@ -83,7 +83,7 @@
     var inBasket = state.basket.indexOf(f.id) !== -1;
     return (
       '<article class="fabric-card">' +
-        '<a href="#" class="fabric-card-link">' +
+        '<a href="fabric-detail.html?fabric=' + esc(f.id) + '" class="fabric-card-link">' +
           '<img src="' + esc(f.img) + '" alt="' + esc(f.alt) + '" width="900" height="700" loading="lazy" class="fabric-card-img">' +
         '</a>' +
         '<div class="fabric-card-body">' +
@@ -97,7 +97,7 @@
             '<button type="button" class="fabric-card-add' + (inBasket ? ' in-basket' : '') + '" data-add="' + esc(f.id) + '">' +
               (inBasket ? '✓ In sample request' : '+ Add to sample request') +
             '</button>' +
-            '<a href="#" class="fabric-card-spec">Full spec sheet →</a>' +
+            '<a href="fabric-detail.html?fabric=' + esc(f.id) + '" class="fabric-card-spec">Full spec sheet →</a>' +
           '</div>' +
         '</div>' +
       '</article>'

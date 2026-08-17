@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Request a Sample — RyderTex | Changshu Knitted Fabric Mill</title>
+<meta name="description" content="Request free knitted fabric samples or a quote from RyderTex, Changshu. Send a construction or a reference fabric and we quote against it.">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&family=Inter:wght@400;500&family=Noto+Sans+SC:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="theme-light">
+<div class="page-wrap" style="background:#F4F2EE">
+  <div class="noise-overlay" aria-hidden="true"></div>
+
+  <div style="background:#0D0E10">
+    <div id="site-header"></div>
+  </div>
+
+  <main class="main-content" style="background:#F4F2EE;color:#0D0E10">
+    <section class="page-hero" style="padding:clamp(56px,7vw,110px) clamp(40px,7vw,150px) clamp(44px,5vw,70px)">
+      <div class="kicker">Contact · sample &amp; quote requests</div>
+      <h1 style="color:#0D0E10;max-width:20ch;font-size:clamp(2.4rem,6.4vw,7rem);line-height:.88;letter-spacing:-.042em">Send the spec<span class="accent">.</span> We send the fabric<span class="accent">.</span></h1>
+      <p style="color:#4A4F57;max-width:56ch">Samples are free. If you already import a comparable fabric, send the reference and we will quote against it rather than against a generic construction.</p>
+    </section>
+
+    <section style="padding:0 clamp(40px,7vw,150px) clamp(70px,8vw,130px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:clamp(38px,5vw,80px);align-items:start">
+      <form id="contact-form" class="rt-form">
+        <div id="basket-panel-lite" class="col-full" style="border:1px solid rgba(47,83,224,.4);background:rgba(47,83,224,.06);padding:18px 20px;display:flex;flex-direction:column;gap:12px" hidden>
+          <span style="font-family:'JetBrains Mono',ui-monospace,monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:#2F53E0">From your fabric library selection</span>
+          <div id="basket-chips" style="display:flex;flex-wrap:wrap;gap:7px"></div>
+        </div>
+        <label><span>Name</span><input type="text" name="name" required></label>
+        <label><span>Company</span><input type="text" name="company" required></label>
+        <label class="col-full"><span>Email</span><input type="email" name="email" required></label>
+        <label><span>Fabric type</span>
+          <select name="fabric">
+            <option>Single knit</option><option>Double knit / interlock</option><option>Rib</option><option>French terry</option><option>Jacquard</option><option>Fleece</option><option>Sherpa</option><option>Velour</option><option>Warp knit</option><option>Yarn-dye stripe</option><option>Crinkle / seersucker</option><option>Not sure yet</option>
+          </select>
+        </label>
+        <label><span>Target GSM</span><input type="text" name="gsm" placeholder="e.g. 220"></label>
+        <label><span>Quantity</span><input type="text" name="qty" placeholder="kg or yards"></label>
+        <label><span>Market</span><input type="text" name="market" placeholder="e.g. USA"></label>
+        <label class="col-full"><span>Reference fabric or notes</span><textarea name="notes" rows="3" style="resize:vertical"></textarea></label>
+        <div class="rt-form-actions">
+          <button type="submit" class="rt-form-submit">Request samples</button>
+          <span id="sent-notice" class="form-notice" hidden>[[NEEDS INPUT: form endpoint — nothing was sent]]</span>
+        </div>
+      </form>
+
+      <aside style="display:flex;flex-direction:column;gap:34px">
+        <div>
+          <div class="tag-group-label" style="border-bottom-color:rgba(13,14,16,.14)">Direct</div>
+          <div style="margin-top:18px;display:flex;flex-direction:column;gap:10px;font-family:'JetBrains Mono',ui-monospace,monospace;font-size:12px;letter-spacing:.08em;line-height:1.8;color:#4A4F57">
+            <a href="mailto:info@rydertex.com.cn" style="color:#0D0E10">info@rydertex.com.cn</a>
+            <a href="https://rydertextiles.com" style="color:#4A4F57">rydertextiles.com</a>
+            <span style="color:#2F53E0">[[NEEDS INPUT: telephone]]</span>
+          </div>
+        </div>
+        <div>
+          <div class="tag-group-label" style="border-bottom-color:rgba(13,14,16,.14)">Mill address</div>
+          <p style="margin:18px 0 0;font-family:'JetBrains Mono',ui-monospace,monospace;font-size:12px;letter-spacing:.08em;line-height:1.9;text-transform:uppercase;color:#4A4F57">Building #21, Huanhu Hiongshun<br>#78 Xin'an Jiang Road<br>Southeast Development Zone<br>Changshu, Jiangsu, China 215500</p>
+        </div>
+        <div>
+          <div class="tag-group-label" style="border-bottom-color:rgba(13,14,16,.14)">WeChat</div>
+          <div style="margin-top:18px;width:118px;height:118px;border:1px dashed rgba(47,83,224,.5);display:grid;place-items:center;text-align:center;padding:12px;font-family:'JetBrains Mono',ui-monospace,monospace;font-size:9px;letter-spacing:.08em;line-height:1.6;text-transform:uppercase;color:#2F53E0">[[NEEDS INPUT: WeChat QR]]</div>
+        </div>
+        <div>
+          <div class="tag-group-label" style="border-bottom-color:rgba(13,14,16,.14)">What happens next</div>
+          <div style="margin-top:18px;display:flex;flex-direction:column">
+            <div style="display:grid;grid-template-columns:auto 1fr;gap:14px;padding:12px 0;border-bottom:1px solid rgba(13,14,16,.1)"><span style="font-family:'JetBrains Mono',ui-monospace,monospace;font-size:10.5px;letter-spacing:.12em;color:#2F53E0">01</span><span style="font-size:15px;line-height:1.5;color:#4A4F57">We acknowledge the inquiry and quote, referenced against your current import where you give us one.</span></div>
+            <div style="display:grid;grid-template-columns:auto 1fr;gap:14px;padding:12px 0;border-bottom:1px solid rgba(13,14,16,.1)"><span style="font-family:'JetBrains Mono',ui-monospace,monospace;font-size:10.5px;letter-spacing:.12em;color:#2F53E0">02</span><span style="font-size:15px;line-height:1.5;color:#4A4F57">Terms, pricing and LC are settled and certificates are shared.</span></div>
+            <div style="display:grid;grid-template-columns:auto 1fr;gap:14px;padding:12px 0;border-bottom:1px solid rgba(13,14,16,.1)"><span style="font-family:'JetBrains Mono',ui-monospace,monospace;font-size:10.5px;letter-spacing:.12em;color:#2F53E0">03</span><span style="font-size:15px;line-height:1.5;color:#4A4F57">Free samples ship in your blends for testing and shade approval.</span></div>
+            <div style="display:grid;grid-template-columns:auto 1fr;gap:14px;padding:12px 0;border-bottom:1px solid rgba(13,14,16,.1)"><span style="font-family:'JetBrains Mono',ui-monospace,monospace;font-size:10.5px;letter-spacing:.12em;color:#2F53E0">04</span><span style="font-size:15px;line-height:1.5;color:#4A4F57">Production runs on our own machines and the container loads in Changshu.</span></div>
+          </div>
+        </div>
+      </aside>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+</div>
+
+<script src="js/header.js"></script>
+<script src="js/footer.js"></script>
+<script src="js/contact.js"></script>
+</body>
+</html>

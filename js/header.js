@@ -1,6 +1,4 @@
 // Shared site header. Ported from project/Site Header.dc.html.
-// Nav targets other than Fabrics aren't built yet (out of scope for this pass),
-// so they link to "#" rather than a page that doesn't exist.
 (function () {
   const mount = document.getElementById('site-header');
   if (!mount) return;
@@ -12,12 +10,12 @@
         <span>Textiles</span>
       </a>
       <nav class="site-nav">
-        <a href="#">Capabilities</a>
-        <a href="index.html">Fabrics</a>
-        <a href="#">Facilities</a>
-        <a href="#">Sustainability</a>
-        <a href="#">Global</a>
-        <a href="#">Company</a>
+        <a href="capabilities.html">Capabilities</a>
+        <a href="fabrics.html">Fabrics</a>
+        <a href="facilities.html">Facilities</a>
+        <a href="sustainability.html">Sustainability</a>
+        <a href="global.html">Global</a>
+        <a href="company.html">Company</a>
       </nav>
       <div class="header-right">
         <div class="lang-switch">
@@ -25,7 +23,7 @@
           <span class="lang-sep">/</span>
           <button type="button" class="lang-zh" title="中文 copy pending" disabled>中文</button>
         </div>
-        <a href="#" class="header-cta">Request a sample</a>
+        <a href="contact.html" class="header-cta">Request a sample</a>
       </div>
     </header>
   `;

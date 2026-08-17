@@ -3,11 +3,13 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Fabric Library — RyderTex | Knitted Fabrics from Changshu</title>
-<meta name="description" content="Filter RyderTex knitted fabric families by structure, composition, GSM, gauge, finish and certification. Build one consolidated swatch request.">
+<title>RyderTex — Knitted Fabric Mill, Changshu | Yarn to Container</title>
+<meta name="description" content="Changshu Ryder Textile: vertically integrated knitted fabric mill in Changshu, Jiangsu. 300+ circular knitting machines, 3 dye houses, 100+ tonnes dyed per day. GRS and OEKO-TEX certified.">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&family=Inter:wght@400;500&family=Noto+Sans+SC:wght@400;500&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="assets/rydertex-assets/03-factory/dyehouse-finishing-line.jpeg" fetchpriority="high">
 <link rel="stylesheet" href="css/styles.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Changshu Ryder Textile Co., Ltd.","alternateName":"RyderTex","foundingDate":"2003","parentOrganization":{"@type":"Organization","name":"Landsun Textile Group"},"url":"https://rydertextiles.com","email":"info@rydertex.com.cn","address":{"@type":"PostalAddress","streetAddress":"Building #21, Huanhu Hiongshun, #78 Xin'an Jiang Road, Southeast Development Zone","addressLocality":"Changshu","addressRegion":"Jiangsu","postalCode":"215500","addressCountry":"CN"}}</script>
 </head>
 <body>
 <div class="page-wrap">
@@ -16,66 +18,348 @@
 
   <div id="site-header"></div>
 
-  <main class="main-content">
-    <section class="hero">
-      <div class="eyebrow">Fabric library</div>
-      <h1>Twelve families<span class="accent-comma">,</span> filtered</h1>
-      <p class="hero-sub">Every family below is knitted, dyed and finished in Changshu. Select the ones you want to feel, and send one consolidated swatch request instead of six emails.</p>
+  <main id="top">
+    <section class="home-hero">
+      <img src="assets/rydertex-assets/03-factory/dyehouse-finishing-line.jpeg" alt="Dye house finishing line in Changshu: fabric feeding through a stenter, trolleys of greige knit along a central aisle." width="1210" height="908" fetchpriority="high">
+      <div class="home-hero-fade"></div>
+      <div class="home-hero-content">
+        <div class="home-hero-kicker">Changshu Ryder Textile · Knitted fabric mill</div>
+        <h1>
+          <span>One mill<span class="accent">.</span></span>
+          <span>Yarn to container<span class="accent">.</span></span>
+        </h1>
+        <p class="home-hero-sub">Spinning, knitting, dyeing, finishing and export inside one company — no broker, no handoff, no second mill waiting on the first.</p>
+        <div class="home-hero-ctas">
+          <a href="#sample" class="btn-solid">Request a sample</a>
+          <a href="fabrics.html" class="btn-outline">View fabric library</a>
+        </div>
+      </div>
+      <div class="home-hero-strip">
+        <span>Changshu, Jiangsu</span><span class="dot">·</span><span>Est. 2003</span><span class="dot">·</span><span>GRS + OEKO-TEX certified</span><span class="dot">·</span><span>Landsun Textile Group</span>
+      </div>
     </section>
 
-    <div class="filter-bar">
-      <div class="filter-bar-count">Showing <span id="shown-count" class="accent-text">12</span> of 12 families</div>
-      <div class="filter-bar-actions">
-        <button type="button" id="clear-filters" class="btn-ghost">Clear filters</button>
-        <button type="button" id="toggle-basket" class="btn-primary">Sample request <span id="basket-count" class="count-badge">0</span></button>
-      </div>
-    </div>
-
-    <div id="basket-panel" class="basket-panel" hidden>
-      <div class="basket-header">
-        <span class="basket-title">Your swatch request</span>
-        <button type="button" id="close-basket" class="btn-text">Close</button>
-      </div>
-      <p id="basket-empty" class="basket-empty">Nothing selected yet — add families from the grid below.</p>
-      <div id="basket-items"></div>
-      <a href="#" class="basket-send">Send this request →</a>
-    </div>
-
-    <section class="fabrics-section">
-      <aside class="filters-aside">
-        <div class="filter-group">
-          <label for="search-input" class="filter-label">Search</label>
-          <input type="search" id="search-input" placeholder="Family name" class="search-input">
+    <section class="rule-top">
+      <div class="marquee">
+        <div class="marquee-track">
+          <div class="marquee-set"><span>55,000 sqm</span><span class="dot">·</span><span>300+ knitting machines</span><span class="dot">·</span><span>3 dye houses</span><span class="dot">·</span><span>100+ tonnes/day</span><span class="dot">·</span><span>11 export markets</span><span class="dot">·</span><span>20+ global brands</span><span class="dot">·</span><span>95% on-time</span><span class="dot">·</span><span>Est. 2003</span><span class="dot">·</span></div>
+          <div class="marquee-set" aria-hidden="true"><span>55,000 sqm</span><span class="dot">·</span><span>300+ knitting machines</span><span class="dot">·</span><span>3 dye houses</span><span class="dot">·</span><span>100+ tonnes/day</span><span class="dot">·</span><span>11 export markets</span><span class="dot">·</span><span>20+ global brands</span><span class="dot">·</span><span>95% on-time</span><span class="dot">·</span><span>Est. 2003</span><span class="dot">·</span></div>
         </div>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(228px,1fr));padding:0 clamp(80px,9vw,170px)">
+        <div class="stat-tile-border reveal"><div class="n" data-countup="55000" data-comma="1">0</div><div style="margin-top:14px"><span class="label">Square metres · 3 factories</span></div></div>
+        <div class="stat-tile-border reveal"><div class="n"><span data-countup="300">0</span><span class="accent">+</span></div><div style="margin-top:14px"><span class="label">Circular knitting machines</span></div></div>
+        <div class="stat-tile-border reveal"><div class="n"><span data-countup="100">0</span><span class="accent">+</span></div><div style="margin-top:14px"><span class="label">Tonnes dyed per day · 3 houses</span></div></div>
+        <div class="stat-tile-border reveal" style="border-right:none"><div class="n"><span data-countup="95">0</span><span class="accent">%</span></div><div style="margin-top:14px"><span class="label">On-time delivery</span></div></div>
+      </div>
+    </section>
 
-        <div class="filter-group structure-filters">
-          <div class="filter-group-title">Structure</div>
-          <label class="structure-option"><input type="checkbox" data-structure="Single knit">Single knit</label>
-          <label class="structure-option"><input type="checkbox" data-structure="Double knit">Double knit</label>
-          <label class="structure-option"><input type="checkbox" data-structure="Rib">Rib</label>
-          <label class="structure-option"><input type="checkbox" data-structure="Warp knit">Warp knit</label>
-          <label class="structure-option"><input type="checkbox" data-structure="Jacquard">Jacquard</label>
-          <label class="structure-option"><input type="checkbox" data-structure="Velour">Velour</label>
-          <label class="structure-option"><input type="checkbox" data-structure="Raised / brushed">Raised / brushed</label>
-          <label class="structure-option"><input type="checkbox" data-structure="Seersucker / crinkle">Seersucker / crinkle</label>
-          <label class="structure-option"><input type="checkbox" data-structure="Yarn-dye stripe">Yarn-dye stripe</label>
-        </div>
-
-        <div class="filter-group locked-filters">
-          <div class="filter-group-title">Locked until spec data lands</div>
-          <div class="locked-tags">
-            <span class="locked-tag">Composition</span>
-            <span class="locked-tag">GSM range</span>
-            <span class="locked-tag">Gauge</span>
-            <span class="locked-tag">Finish</span>
-            <span class="locked-tag">End use</span>
-            <span class="locked-tag">Certification</span>
+    <section id="chain" class="rule-top">
+      <div class="section" style="padding-bottom:clamp(40px,5vw,70px)">
+        <div class="section-head">
+          <div>
+            <div class="kicker">The chain · 01—05</div>
+            <h2 class="section-title" style="max-width:22ch">One continuous thread</h2>
           </div>
-          <div class="needs-input">[[NEEDS INPUT: per-family GSM, gauge, composition, finish, end use and certification — these six filters go live the moment the data arrives]]</div>
+          <p class="section-lede" style="max-width:46ch">Most fabric passes through four companies before it reaches a cutting table. Every stage below happens inside RyderTex, in one industrial cluster, on machines we own.</p>
         </div>
-      </aside>
+      </div>
 
-      <div id="fabrics-grid" class="fabrics-grid"></div>
+      <div class="chapter">
+        <div class="chapter-media"><img src="assets/rydertex-assets/03-factory/spinning-hall-bobbins.png" alt="Spinning hall at RyderTex: rows of spinning frames in one-point perspective, bobbins of white yarn on every station." width="1000" height="700" loading="lazy"><div class="chapter-fade"></div>
+          <div class="chapter-copy reveal">
+            <div class="chapter-tag"><span class="no">01</span><span class="rule"></span><span class="stage">Spinning</span></div>
+            <h3>Yarn is the first variable, so we own it</h3>
+            <p>A knit programme is decided at the spinning frame. Compact Siro and Vortex lines run greige and dyed lots in cotton, polyester, rayon, acrylic, modal and cellulosic blends, including heather, slub and space-dye effects.</p>
+            <div class="chapter-specs">
+              <div class="row"><span class="k">Systems</span><span class="v">Compact Siro · Vortex</span></div>
+              <div class="row"><span class="k">States</span><span class="v">Greige + dyed</span></div>
+              <div class="row"><span class="k">Effects</span><span class="v">Heather · slub · space-dye</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="chapter">
+        <div class="chapter-media"><img src="assets/rydertex-assets/03-factory/knitting-hall-wide.png" alt="Wide view of the RyderTex knitting floor with circular knitting machines running under high-bay lighting." width="1000" height="700" loading="lazy"><div class="chapter-fade"></div>
+          <div class="chapter-copy reveal">
+            <div class="chapter-tag"><span class="no">02</span><span class="rule"></span><span class="stage">Knitting</span></div>
+            <h3>300 circular machines, 18 to 40 gauge</h3>
+            <p>Six machine classes cover open width, single knit, double knit, French terry, jacquard and rib at 30 to 38 inch. Single knit lines absorb five-times order spikes; double knit scales to 20,000 kg a day.</p>
+            <div class="chapter-specs">
+              <div class="row"><span class="k">Machines</span><span class="v">300+</span></div>
+              <div class="row"><span class="k">Gauge range</span><span class="v">18–40 GG</span></div>
+              <div class="row"><span class="k">Double knit ceiling</span><span class="v">20,000 kg/day</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="chapter">
+        <div class="chapter-media"><img src="assets/rydertex-assets/03-factory/dye-lab-technician.jpeg" alt="Technician at the RyderTex dye lab checking a colour recipe against dyed fabric swatches." width="1000" height="700" loading="lazy"><div class="chapter-fade"></div>
+          <div class="chapter-copy reveal">
+            <div class="chapter-tag"><span class="no">03</span><span class="rule"></span><span class="stage">Dyeing</span></div>
+            <h3>Three dye houses, each built for one fabric class</h3>
+            <p>Colour is where most supply chains lose a week. We run three specialised houses rather than one general-purpose plant, so an activewear lot and a nylon lot never queue behind each other.</p>
+            <div class="chapter-specs">
+              <div class="row"><span class="k">Capacity</span><span class="v">100+ tonnes/day</span></div>
+              <div class="row"><span class="k">Unit 1 · Shuangchen</span><span class="v">Active · sport · outerwear</span></div>
+              <div class="row"><span class="k">Unit 2 · Huicai</span><span class="v">Nylon · nylon/spandex</span></div>
+              <div class="row"><span class="k">Unit 3</span><span class="v">Fleece · sherpa · printing</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="chapter">
+        <div class="chapter-media"><img src="assets/rydertex-assets/03-factory/stenter-finishing-machine.jpeg" alt="Stenter finishing machine at RyderTex with a loop of knitted fabric feeding through the frame." width="1000" height="700" loading="lazy"><div class="chapter-fade"></div>
+          <div class="chapter-copy reveal">
+            <div class="chapter-tag"><span class="no">04</span><span class="rule"></span><span class="stage">Finishing</span></div>
+            <h3>Hand is decided on the stenter</h3>
+            <p>Sand-wash, ultra carbon peach, sueding, raising and brushing, plus fleece and sherpa printing in Unit 3. Thirteen structures come off this floor, from seersucker crinkle to embossed jacquard.</p>
+            <div class="chapter-specs">
+              <div class="row"><span class="k">Routes</span><span class="v">Mechanical + chemical</span></div>
+              <div class="row"><span class="k">Structures</span><span class="v">13</span></div>
+              <div class="row"><span class="k">Printing</span><span class="v">Unit 3</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="chapter">
+        <div class="chapter-media"><img src="assets/rydertex-assets/02-fabric/fabric-rolls-warehouse.png" alt="Warehouse racking stacked with rolls of finished white knitted fabric ready for export." width="1000" height="700" loading="lazy"><div class="chapter-fade"></div>
+          <div class="chapter-copy reveal">
+            <div class="chapter-tag"><span class="no">05</span><span class="rule"></span><span class="stage">Export</span></div>
+            <h3>Container-loaded in Changshu</h3>
+            <p>Fabric is inspected, rolled and loaded here, 90 km from the Port of Shanghai. Eleven markets, 95% on-time, and roughly 15% off the cycle time of a sourcing chain split across four suppliers.</p>
+            <div class="chapter-specs">
+              <div class="row"><span class="k">Markets</span><span class="v">11</span></div>
+              <div class="row"><span class="k">On-time</span><span class="v">95%</span></div>
+              <div class="row"><span class="k">Cycle</span><span class="v">~15% faster</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="chapter-closer">
+        <p>Five stages. One company. <span class="dim">No handoffs.</span></p>
+      </div>
+    </section>
+
+    <section id="fabrics" style="padding:clamp(80px,9vw,150px) 0">
+      <div class="section-head" style="padding:0 clamp(80px,9vw,170px)">
+        <div>
+          <div class="kicker">Fabric library</div>
+          <h2 class="section-title">Twelve families<span class="accent">,</span> one mill</h2>
+        </div>
+        <div class="rail-head" style="min-width:220px;flex-direction:column;align-items:stretch;display:flex">
+          <div style="display:flex;justify-content:space-between"><span data-rail-count="1">01 / 12</span><span>Drag</span></div>
+          <div class="rail-progress"><div data-rail-bar="1" class="rail-progress-bar"></div></div>
+        </div>
+      </div>
+
+      <div data-rail="1" class="rail">
+        <a href="fabric-detail.html?fabric=01-stripe-yarn-dye" class="rail-card"><img src="assets/rydertex-assets/07-derived/swatch-01-stripe-yarn-dye.png" alt="Fan of yarn-dyed striped knit swatches in multiple colourways." width="900" height="700" loading="lazy"><div class="rail-card-body"><div class="rail-card-head"><span class="rail-card-name">Yarn-Dye Stripe</span><span class="rail-card-no">01 / 12</span></div><div class="rail-card-structure">Stripe yarn-dye</div><div class="fabric-card-needs-input">[[NEEDS INPUT: GSM · GAUGE · COMPOSITION]]</div><div class="rail-card-view">View specs →</div></div></a>
+        <a href="fabric-detail.html?fabric=02-heather-jersey" class="rail-card"><img src="assets/rydertex-assets/07-derived/swatch-02-heather-jersey.png" alt="Fan of heather-melange jersey swatches in grey, navy and pastel tones." width="900" height="700" loading="lazy"><div class="rail-card-body"><div class="rail-card-head"><span class="rail-card-name">Heather Jersey</span><span class="rail-card-no">02 / 12</span></div><div class="rail-card-structure">Single knit</div><div class="fabric-card-needs-input">[[NEEDS INPUT: GSM · GAUGE · COMPOSITION]]</div><div class="rail-card-view">View specs →</div></div></a>
+        <a href="fabric-detail.html?fabric=03-brushed-solid-warm" class="rail-card"><img src="assets/rydertex-assets/07-derived/swatch-03-brushed-solid-warm.png" alt="Fan of brushed solid knit swatches in warm browns, orange and red." width="900" height="700" loading="lazy"><div class="rail-card-body"><div class="rail-card-head"><span class="rail-card-name">Brushed Solid</span><span class="rail-card-no">03 / 12</span></div><div class="rail-card-structure">Raised / brushed</div><div class="fabric-card-needs-input">[[NEEDS INPUT: GSM · GAUGE · COMPOSITION]]</div><div class="rail-card-view">View specs →</div></div></a>
+        <a href="fabric-detail.html?fabric=04-solid-cool" class="rail-card"><img src="assets/rydertex-assets/07-derived/swatch-04-solid-cool.png" alt="Fan of smooth tricot swatches in black, blue and pale pink." width="900" height="700" loading="lazy"><div class="rail-card-body"><div class="rail-card-head"><span class="rail-card-name">Tricot</span><span class="rail-card-no">04 / 12</span></div><div class="rail-card-structure">Warp knit</div><div class="fabric-card-needs-input">[[NEEDS INPUT: GSM · GAUGE · COMPOSITION]]</div><div class="rail-card-view">View specs →</div></div></a>
+        <a href="fabric-detail.html?fabric=05-interlock-solid" class="rail-card"><img src="assets/rydertex-assets/07-derived/swatch-05-interlock-solid.png" alt="Fan of dense interlock swatches in deep solid colours." width="900" height="700" loading="lazy"><div class="rail-card-body"><div class="rail-card-head"><span class="rail-card-name">Interlock</span><span class="rail-card-no">05 / 12</span></div><div class="rail-card-structure">Double knit</div><div class="fabric-card-needs-input">[[NEEDS INPUT: GSM · GAUGE · COMPOSITION]]</div><div class="rail-card-view">View specs →</div></div></a>
+        <a href="fabric-detail.html?fabric=06-velour-multi" class="rail-card"><img src="assets/rydertex-assets/07-derived/swatch-06-velour-multi.png" alt="Fan of velour swatches with visible pile in magenta, charcoal and citron." width="900" height="700" loading="lazy"><div class="rail-card-body"><div class="rail-card-head"><span class="rail-card-name">Velour</span><span class="rail-card-no">06 / 12</span></div><div class="rail-card-structure">Velour</div><div class="fabric-card-needs-input">[[NEEDS INPUT: GSM · GAUGE · COMPOSITION]]</div><div class="rail-card-view">View specs →</div></div></a>
+        <a href="fabric-detail.html?fabric=07-velour-pastel" class="rail-card"><img src="assets/rydertex-assets/07-derived/swatch-07-velour-pastel.png" alt="Fan of brushed velour swatches in dusty pink, teal and olive." width="900" height="700" loading="lazy"><div class="rail-card-body"><div class="rail-card-head"><span class="rail-card-name">Velour, Brushed</span><span class="rail-card-no">07 / 12</span></div><div class="rail-card-structure">Velour</div><div class="fabric-card-needs-input">[[NEEDS INPUT: GSM · GAUGE · COMPOSITION]]</div><div class="rail-card-view">View specs →</div></div></a>
+        <a href="fabric-detail.html?fabric=08-textured-jacquard" class="rail-card"><img src="assets/rydertex-assets/07-derived/swatch-08-textured-jacquard.png" alt="Close view of textured jacquard swatches with a chevron relief." width="900" height="700" loading="lazy"><div class="rail-card-body"><div class="rail-card-head"><span class="rail-card-name">Textured Jacquard</span><span class="rail-card-no">08 / 12</span></div><div class="rail-card-structure">Jacquard</div><div class="fabric-card-needs-input">[[NEEDS INPUT: GSM · GAUGE · COMPOSITION]]</div><div class="rail-card-view">View specs →</div></div></a>
+        <a href="fabric-detail.html?fabric=09-corduroy-rib" class="rail-card"><img src="assets/rydertex-assets/07-derived/swatch-09-corduroy-rib.png" alt="Fan of corduroy-rib swatches in cream, navy, pink and black." width="900" height="700" loading="lazy"><div class="rail-card-body"><div class="rail-card-head"><span class="rail-card-name">Corduroy Rib</span><span class="rail-card-no">09 / 12</span></div><div class="rail-card-structure">Rib</div><div class="fabric-card-needs-input">[[NEEDS INPUT: GSM · GAUGE · COMPOSITION]]</div><div class="rail-card-view">View specs →</div></div></a>
+        <a href="fabric-detail.html?fabric=10-crinkle-seersucker" class="rail-card"><img src="assets/rydertex-assets/07-derived/swatch-10-crinkle-seersucker.png" alt="Fan of crinkle seersucker swatches in burgundy, white and pink." width="900" height="700" loading="lazy"><div class="rail-card-body"><div class="rail-card-head"><span class="rail-card-name">Crinkle Seersucker</span><span class="rail-card-no">10 / 12</span></div><div class="rail-card-structure">Seersucker / crinkle</div><div class="fabric-card-needs-input">[[NEEDS INPUT: GSM · GAUGE · COMPOSITION]]</div><div class="rail-card-view">View specs →</div></div></a>
+        <a href="fabric-detail.html?fabric=11-embossed-jacquard" class="rail-card"><img src="assets/rydertex-assets/07-derived/swatch-11-embossed-jacquard.png" alt="Fan of embossed jacquard swatches with a repeating branded relief." width="900" height="700" loading="lazy"><div class="rail-card-body"><div class="rail-card-head"><span class="rail-card-name">Embossed Jacquard</span><span class="rail-card-no">11 / 12</span></div><div class="rail-card-structure">Embossed jacquard</div><div class="fabric-card-needs-input">[[NEEDS INPUT: GSM · GAUGE · COMPOSITION]]</div><div class="rail-card-view">View specs →</div></div></a>
+        <a href="fabric-detail.html?fabric=12-rib" class="rail-card"><img src="assets/rydertex-assets/07-derived/swatch-12-rib.png" alt="Fan of fine rib swatches in purple, navy and pale grey." width="900" height="700" loading="lazy"><div class="rail-card-body"><div class="rail-card-head"><span class="rail-card-name">Rib</span><span class="rail-card-no">12 / 12</span></div><div class="rail-card-structure">Rib</div><div class="fabric-card-needs-input">[[NEEDS INPUT: GSM · GAUGE · COMPOSITION]]</div><div class="rail-card-view">View specs →</div></div></a>
+        <a href="fabrics.html" class="rail-card-all"><span class="title">All fabrics</span><span class="sub">Filter by structure, GSM, gauge, finish, certification →</span></a>
+      </div>
+    </section>
+
+    <section id="floor" class="section rule-top">
+      <div class="section-head">
+        <div>
+          <div class="kicker">The machine floor</div>
+          <h2 class="section-title">Six machine classes<span class="accent">,</span> 18 to 40 gauge</h2>
+        </div>
+        <p class="section-lede" style="max-width:40ch">Gauge and width decide what a mill can physically make. This is the full range on our floor.</p>
+      </div>
+
+      <div style="margin-top:clamp(48px,6vw,84px)">
+        <div class="gauge-head">
+          <span>Machine</span><span>Gauge</span><span>Width</span>
+          <div class="gauge-head-scale"><span>18</span><span>24</span><span>28</span><span>34</span><span>40 gg</span></div>
+        </div>
+        <div class="gauge-row"><div class="name">Open Width</div><div class="gauge">28–40 GG</div><div class="width">34" / 38"</div><div class="gauge-bar-wrap"><div class="gauge-track"><div class="gauge-fill reveal" style="left:45.5%;width:54.5%"></div></div><div class="gauge-use">High-speed open-width knits · bulk active, sports, yoga</div></div></div>
+        <div class="gauge-row"><div class="name">Single Knit</div><div class="gauge">24–34 GG</div><div class="width">30" / 34" / 38"</div><div class="gauge-bar-wrap"><div class="gauge-track"><div class="gauge-fill reveal" style="left:27.3%;width:45.5%"></div></div><div class="gauge-use">Lightweight modal · absorbs 5× order spikes</div></div></div>
+        <div class="gauge-row"><div class="name">Double Knit</div><div class="gauge">18–38 GG</div><div class="width">30" / 34" / 38"</div><div class="gauge-bar-wrap"><div class="gauge-track"><div class="gauge-fill reveal" style="left:0%;width:90.9%"></div></div><div class="gauge-use">Dense interlock and rib · leisurewear · to 20,000 kg/day</div></div></div>
+        <div class="gauge-row"><div class="name">French Terry</div><div class="gauge">18–24 GG</div><div class="width">30" / 34"</div><div class="gauge-bar-wrap"><div class="gauge-track"><div class="gauge-fill reveal" style="left:0%;width:27.3%"></div></div><div class="gauge-use">Looped textures for activewear</div></div></div>
+        <div class="gauge-row"><div class="name">Jacquard</div><div class="gauge">18–24 GG</div><div class="width">34"</div><div class="gauge-bar-wrap"><div class="gauge-track"><div class="gauge-fill reveal" style="left:0%;width:27.3%"></div></div><div class="gauge-use">Patterned knits · body-mapping · custom branded structures</div></div></div>
+        <div class="gauge-row"><div class="name">Rib</div><div class="gauge">18 GG</div><div class="width">34" / 38"</div><div class="gauge-bar-wrap"><div class="gauge-track"><div class="gauge-fill reveal" style="left:0%;width:2%"></div></div><div class="gauge-use">Variegated designs · elastic bottoms, cuffs, trims</div></div></div>
+      </div>
+
+      <div class="photo-grid graded">
+        <img src="assets/rydertex-assets/07-derived/knit-machine-1.png" alt="Circular knitting machine on the RyderTex floor, frame 1 of four." width="800" height="600" loading="lazy">
+        <img src="assets/rydertex-assets/07-derived/knit-machine-2.png" alt="Circular knitting machine on the RyderTex floor, frame 2 of four." width="800" height="600" loading="lazy">
+        <img src="assets/rydertex-assets/07-derived/knit-machine-3.png" alt="Circular knitting machine on the RyderTex floor, frame 3 of four." width="800" height="600" loading="lazy">
+        <img src="assets/rydertex-assets/07-derived/knit-machine-4.png" alt="Circular knitting machine on the RyderTex floor, frame 4 of four." width="800" height="600" loading="lazy">
+      </div>
+    </section>
+
+    <section class="buyer-zone">
+      <div class="buyer-zone-tag"><div class="kicker">End use · what it becomes</div><div class="flag">Inverted — buyer zone</div></div>
+      <div class="section" style="padding-top:clamp(56px,7vw,110px);padding-bottom:clamp(70px,8vw,130px)">
+        <div class="section-head">
+          <h2 class="section-title" style="max-width:20ch">What the fabric becomes</h2>
+          <p class="section-lede" style="max-width:44ch">Fabric we knit, dyed and finished in Changshu — shipped to eleven markets and cut into product by twenty-plus brands.</p>
+        </div>
+        <span class="form-notice" style="margin-top:30px;display:inline-block">[[NEEDS INPUT: fabric family per garment — needed to tag each item]]</span>
+        <div class="mosaic">
+          <figure class="mosaic-item span-2"><img src="assets/rydertex-assets/04-apparel/apparel-legging-bra-set-blush.png" alt="Legging + bra set made from RyderTex knitted fabric, product cutout on a neutral background." style="aspect-ratio:4/5" loading="lazy"><figcaption>Legging + bra set</figcaption></figure>
+          <figure class="mosaic-item"><img src="assets/rydertex-assets/04-apparel/apparel-hoodie-charcoal.png" alt="Hoodie made from RyderTex knitted fabric, product cutout on a neutral background." style="aspect-ratio:4/5" loading="lazy"><figcaption>Hoodie</figcaption></figure>
+          <figure class="mosaic-item"><img src="assets/rydertex-assets/04-apparel/apparel-tee-sand.png" alt="Tee made from RyderTex knitted fabric, product cutout on a neutral background." style="aspect-ratio:4/5" loading="lazy"><figcaption>Tee</figcaption></figure>
+          <figure class="mosaic-item"><img src="assets/rydertex-assets/04-apparel/apparel-fleece-jogger-beige.png" alt="Fleece jogger made from RyderTex knitted fabric, product cutout on a neutral background." style="aspect-ratio:4/5" loading="lazy"><figcaption>Fleece jogger</figcaption></figure>
+          <figure class="mosaic-item"><img src="assets/rydertex-assets/04-apparel/apparel-mesh-panel-legging-black.jpeg" alt="Mesh-panel legging made from RyderTex knitted fabric, product cutout on a neutral background." style="aspect-ratio:4/5" loading="lazy"><figcaption>Mesh-panel legging</figcaption></figure>
+          <figure class="mosaic-item span-2"><img src="assets/rydertex-assets/04-apparel/apparel-puffer-jacket-red.jpeg" alt="Puffer jacket made from RyderTex knitted fabric, product cutout on a neutral background." style="aspect-ratio:4/5" loading="lazy"><figcaption>Puffer jacket</figcaption></figure>
+          <figure class="mosaic-item"><img src="assets/rydertex-assets/04-apparel/apparel-knit-crop-jogger-set.png" alt="Knit crop + jogger set made from RyderTex knitted fabric, product cutout on a neutral background." style="aspect-ratio:4/5" loading="lazy"><figcaption>Knit crop + jogger set</figcaption></figure>
+          <figure class="mosaic-item"><img src="assets/rydertex-assets/04-apparel/apparel-bikeshort-tee-set-mint.jpeg" alt="Bike short + tee set made from RyderTex knitted fabric, product cutout on a neutral background." style="aspect-ratio:4/5" loading="lazy"><figcaption>Bike short + tee set</figcaption></figure>
+          <figure class="mosaic-item"><img src="assets/rydertex-assets/04-apparel/apparel-windbreaker-white.jpeg" alt="Windbreaker made from RyderTex knitted fabric, product cutout on a neutral background." style="aspect-ratio:4/5" loading="lazy"><figcaption>Windbreaker</figcaption></figure>
+          <figure class="mosaic-item span-2"><img src="assets/rydertex-assets/04-apparel/apparel-bomber-olive.jpeg" alt="Bomber made from RyderTex knitted fabric, product cutout on a neutral background." style="aspect-ratio:4/5" loading="lazy"><figcaption>Bomber</figcaption></figure>
+          <figure class="mosaic-item"><img src="assets/rydertex-assets/04-apparel/apparel-fleece-sweatshirt-grey.jpeg" alt="Fleece sweatshirt made from RyderTex knitted fabric, product cutout on a neutral background." style="aspect-ratio:4/5" loading="lazy"><figcaption>Fleece sweatshirt</figcaption></figure>
+          <figure class="mosaic-item"><img src="assets/rydertex-assets/04-apparel/apparel-hoodie-dusty-pink.png" alt="Hoodie made from RyderTex knitted fabric, product cutout on a neutral background." style="aspect-ratio:4/5" loading="lazy"><figcaption>Hoodie</figcaption></figure>
+          <figure class="mosaic-item"><img src="assets/rydertex-assets/04-apparel/apparel-convertible-hiking-pant-grey.jpeg" alt="Convertible hiking pant made from RyderTex knitted fabric, product cutout on a neutral background." style="aspect-ratio:4/5" loading="lazy"><figcaption>Convertible hiking pant</figcaption></figure>
+          <figure class="mosaic-item"><img src="assets/rydertex-assets/04-apparel/apparel-tee-taupe.png" alt="Tee made from RyderTex knitted fabric, product cutout on a neutral background." style="aspect-ratio:4/5" loading="lazy"><figcaption>Tee</figcaption></figure>
+        </div>
+      </div>
+    </section>
+
+    <section id="trust" class="section rule-bottom">
+      <div class="kicker">Approved by</div>
+      <h2 class="section-title" style="max-width:24ch">Twenty-plus brands buy from this floor</h2>
+      <div class="marks-wall" style="margin-top:clamp(44px,5vw,76px)">
+        <div class="marks-tile"><img src="assets/rydertex-assets/07-derived/mark-adidas.png" alt="adidas logo" loading="lazy" width="240" height="120"></div>
+        <div class="marks-tile"><img src="assets/rydertex-assets/07-derived/mark-inditex.png" alt="Inditex logo" loading="lazy" width="240" height="120"></div>
+        <div class="marks-tile"><img src="assets/rydertex-assets/07-derived/mark-oysho.png" alt="Oysho logo" loading="lazy" width="240" height="120"></div>
+        <div class="marks-tile"><img src="assets/rydertex-assets/07-derived/mark-gap.png" alt="GAP logo" loading="lazy" width="240" height="120"></div>
+        <div class="marks-tile"><img src="assets/rydertex-assets/07-derived/mark-target.png" alt="Target logo" loading="lazy" width="240" height="120"></div>
+        <div class="marks-tile"><img src="assets/rydertex-assets/07-derived/mark-costco.png" alt="Costco logo" loading="lazy" width="240" height="120"></div>
+        <div class="marks-tile"><img src="assets/rydertex-assets/07-derived/mark-sams-club.png" alt="Sam's Club logo" loading="lazy" width="240" height="120"></div>
+        <div class="marks-tile"><img src="assets/rydertex-assets/07-derived/mark-fabletics.png" alt="Fabletics logo" loading="lazy" width="240" height="120"></div>
+        <div class="marks-tile"><img src="assets/rydertex-assets/07-derived/mark-american-eagle.png" alt="American Eagle Outfitters logo" loading="lazy" width="240" height="120"></div>
+        <div class="marks-tile"><img src="assets/rydertex-assets/07-derived/mark-academy-sports.png" alt="Academy Sports + Outdoors logo" loading="lazy" width="240" height="120"></div>
+      </div>
+      <p style="margin:34px 0 0;max-width:62ch;font-size:16px;line-height:1.55;color:#8A8F96;text-wrap:pretty">RyderTex is a subsidiary of Landsun Textile Group. Brand marks shown are customers of the mill; they are not endorsements.</p>
+
+      <div style="margin-top:clamp(64px,8vw,120px);padding-top:clamp(44px,5vw,70px);border-top:1px solid rgba(244,242,238,.14)">
+        <div class="kicker">Certifications</div>
+        <div class="certs-grid">
+          <div class="cert-card"><div class="badge"><img src="assets/rydertex-assets/07-derived/cert-oeko-tex.png" alt="OEKO-TEX Standard 100 certification mark" loading="lazy" width="240" height="180"></div><div style="display:flex;flex-direction:column;gap:7px;min-width:0"><span class="name">OEKO-TEX Standard 100</span><span class="num" style="color:#F4F2EE">22.HCN.48110 · Hohenstein HTTI</span></div></div>
+          <div class="cert-card"><div class="badge"><img src="assets/rydertex-assets/07-derived/cert-grs.png" alt="Global Recycled Standard certification mark" loading="lazy" width="240" height="180"></div><div style="display:flex;flex-direction:column;gap:7px;min-width:0"><span class="name">Global Recycled Standard</span><span class="num" style="color:#2F53E0">[[NEEDS INPUT]]</span></div></div>
+          <div class="cert-card"><div class="badge"><img src="assets/rydertex-assets/07-derived/cert-rcs.png" alt="Recycled Blended Claim Standard certification mark" loading="lazy" width="240" height="180"></div><div style="display:flex;flex-direction:column;gap:7px;min-width:0"><span class="name">Recycled Claim Standard</span><span class="num" style="color:#2F53E0">[[NEEDS INPUT]]</span></div></div>
+          <div class="cert-card"><div class="badge"><img src="assets/rydertex-assets/07-derived/cert-bci.png" alt="Better Cotton Initiative mark" loading="lazy" width="240" height="180"></div><div style="display:flex;flex-direction:column;gap:7px;min-width:0"><span class="name">Better Cotton Initiative</span><span class="num" style="color:#2F53E0">[[NEEDS INPUT]]</span></div></div>
+          <div class="cert-card"><div class="badge"><img src="assets/rydertex-assets/07-derived/cert-fsc.png" alt="FSC Mix certification mark" loading="lazy" width="240" height="180"></div><div style="display:flex;flex-direction:column;gap:7px;min-width:0"><span class="name">FSC Mix</span><span class="num" style="color:#F4F2EE">FSC® C172977</span></div></div>
+          <div class="cert-card"><div class="badge"><img src="assets/rydertex-assets/07-derived/cert-tencel.png" alt="TENCEL mark" loading="lazy" width="240" height="180"></div><div style="display:flex;flex-direction:column;gap:7px;min-width:0"><span class="name">TENCEL™ licensed</span><span class="num" style="color:#2F53E0">[[NEEDS INPUT]]</span></div></div>
+          <div class="cert-card"><div class="badge"><img src="assets/rydertex-assets/07-derived/cert-inditex.png" alt="Inditex mark" loading="lazy" width="240" height="180"></div><div style="display:flex;flex-direction:column;gap:7px;min-width:0"><span class="name">Inditex approved supplier</span><span class="num" style="color:#2F53E0">[[NEEDS INPUT]]</span></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="global" class="section">
+      <div class="section-head">
+        <div>
+          <div class="kicker">Global reach</div>
+          <h2 class="section-title">Eleven markets<span class="accent">,</span> one origin</h2>
+        </div>
+        <p class="section-lede" style="max-width:40ch">Container-loaded in Changshu, 90 km from the Port of Shanghai.</p>
+      </div>
+      <div style="margin-top:clamp(44px,5vw,80px);display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:clamp(30px,4vw,64px);align-items:start">
+        <div class="map-wrap">
+          <img class="base" src="assets/rydertex-assets/06-map/world-map.svg" alt="Dotted world map showing RyderTex export markets." width="757" height="391" loading="lazy">
+          <svg class="overlay" viewBox="0 0 757 391" fill="none" aria-hidden="true">
+            <path d="M620 172Q378.7 55.7 121 129" stroke="#2F53E0" stroke-width="1" stroke-opacity=".55" pathLength="100" stroke-dasharray="14 86" stroke-linecap="round" style="animation:rt-dash-run 5.5s linear infinite;animation-delay:0s"></path>
+            <path d="M620 172Q511.5 93.0 378 106" stroke="#2F53E0" stroke-width="1" stroke-opacity=".55" pathLength="100" stroke-dasharray="14 86" stroke-linecap="round" style="animation:rt-dash-run 5.5s linear infinite;animation-delay:0.42s"></path>
+            <path d="M620 172Q534.6 124.1 439 145" stroke="#2F53E0" stroke-width="1" stroke-opacity=".55" pathLength="100" stroke-dasharray="14 86" stroke-linecap="round" style="animation:rt-dash-run 5.5s linear infinite;animation-delay:0.84s"></path>
+            <path d="M620 172Q542.5 138.0 462 164" stroke="#2F53E0" stroke-width="1" stroke-opacity=".55" pathLength="100" stroke-dasharray="14 86" stroke-linecap="round" style="animation:rt-dash-run 5.5s linear infinite;animation-delay:1.26s"></path>
+            <path d="M620 172Q536.2 142.5 454 176" stroke="#2F53E0" stroke-width="1" stroke-opacity=".55" pathLength="100" stroke-dasharray="14 86" stroke-linecap="round" style="animation:rt-dash-run 5.5s linear infinite;animation-delay:1.68s"></path>
+            <path d="M620 172Q586.2 170.6 560 192" stroke="#2F53E0" stroke-width="1" stroke-opacity=".55" pathLength="100" stroke-dasharray="14 86" stroke-linecap="round" style="animation:rt-dash-run 5.5s linear infinite;animation-delay:2.10s"></path>
+            <path d="M620 172Q572.6 171.7 537 203" stroke="#2F53E0" stroke-width="1" stroke-opacity=".55" pathLength="100" stroke-dasharray="14 86" stroke-linecap="round" style="animation:rt-dash-run 5.5s linear infinite;animation-delay:2.52s"></path>
+            <path d="M620 172Q574.0 190.6 552 235" stroke="#2F53E0" stroke-width="1" stroke-opacity=".55" pathLength="100" stroke-dasharray="14 86" stroke-linecap="round" style="animation:rt-dash-run 5.5s linear infinite;animation-delay:2.94s"></path>
+            <path d="M620 172Q600.8 189.3 598 215" stroke="#2F53E0" stroke-width="1" stroke-opacity=".55" pathLength="100" stroke-dasharray="14 86" stroke-linecap="round" style="animation:rt-dash-run 5.5s linear infinite;animation-delay:3.36s"></path>
+            <path d="M620 172Q602.8 194.7 605 223" stroke="#2F53E0" stroke-width="1" stroke-opacity=".55" pathLength="100" stroke-dasharray="14 86" stroke-linecap="round" style="animation:rt-dash-run 5.5s linear infinite;animation-delay:3.78s"></path>
+            <circle cx="121" cy="129" r="3.2" fill="#2F53E0" stroke="#2F53E0" stroke-width="6" stroke-opacity=".16" style="transform-origin:121px 129px;animation:rt-pulse 3.4s cubic-bezier(.16,1,.3,1) infinite;animation-delay:0s"></circle>
+            <circle cx="378" cy="106" r="3.2" fill="#2F53E0" stroke="#2F53E0" stroke-width="6" stroke-opacity=".16" style="transform-origin:378px 106px;animation:rt-pulse 3.4s cubic-bezier(.16,1,.3,1) infinite;animation-delay:0.3s"></circle>
+            <circle cx="439" cy="145" r="3.2" fill="#2F53E0" stroke="#2F53E0" stroke-width="6" stroke-opacity=".16" style="transform-origin:439px 145px;animation:rt-pulse 3.4s cubic-bezier(.16,1,.3,1) infinite;animation-delay:0.6s"></circle>
+            <circle cx="462" cy="164" r="3.2" fill="#2F53E0" stroke="#2F53E0" stroke-width="6" stroke-opacity=".16" style="transform-origin:462px 164px;animation:rt-pulse 3.4s cubic-bezier(.16,1,.3,1) infinite;animation-delay:0.9s"></circle>
+            <circle cx="454" cy="176" r="3.2" fill="#2F53E0" stroke="#2F53E0" stroke-width="6" stroke-opacity=".16" style="transform-origin:454px 176px;animation:rt-pulse 3.4s cubic-bezier(.16,1,.3,1) infinite;animation-delay:1.2s"></circle>
+            <circle cx="560" cy="192" r="3.2" fill="#2F53E0" stroke="#2F53E0" stroke-width="6" stroke-opacity=".16" style="transform-origin:560px 192px;animation:rt-pulse 3.4s cubic-bezier(.16,1,.3,1) infinite;animation-delay:1.5s"></circle>
+            <circle cx="537" cy="203" r="3.2" fill="#2F53E0" stroke="#2F53E0" stroke-width="6" stroke-opacity=".16" style="transform-origin:537px 203px;animation:rt-pulse 3.4s cubic-bezier(.16,1,.3,1) infinite;animation-delay:1.8s"></circle>
+            <circle cx="552" cy="235" r="3.2" fill="#2F53E0" stroke="#2F53E0" stroke-width="6" stroke-opacity=".16" style="transform-origin:552px 235px;animation:rt-pulse 3.4s cubic-bezier(.16,1,.3,1) infinite;animation-delay:2.1s"></circle>
+            <circle cx="598" cy="215" r="3.2" fill="#2F53E0" stroke="#2F53E0" stroke-width="6" stroke-opacity=".16" style="transform-origin:598px 215px;animation:rt-pulse 3.4s cubic-bezier(.16,1,.3,1) infinite;animation-delay:2.4s"></circle>
+            <circle cx="605" cy="223" r="3.2" fill="#2F53E0" stroke="#2F53E0" stroke-width="6" stroke-opacity=".16" style="transform-origin:605px 223px;animation:rt-pulse 3.4s cubic-bezier(.16,1,.3,1) infinite;animation-delay:2.7s"></circle>
+            <circle cx="605" cy="164" r="3.2" fill="#2F53E0" stroke="#2F53E0" stroke-width="6" stroke-opacity=".16" style="transform-origin:605px 164px;animation:rt-pulse 3.4s cubic-bezier(.16,1,.3,1) infinite;animation-delay:3.0s"></circle>
+            <circle cx="620" cy="172" r="4.6" fill="#F4F2EE"></circle>
+            <circle cx="620" cy="172" r="11" stroke="#F4F2EE" stroke-width="1" stroke-opacity=".5"></circle>
+          </svg>
+          <div class="map-legend">White node — Changshu, Jiangsu · origin</div>
+          <div class="form-notice" style="margin-top:12px;display:inline-block">[[NEEDS INPUT: supplied map is stylised, not a true projection — node placement is approximate]]</div>
+        </div>
+        <div style="min-width:0">
+          <div class="market-table-head"><span>Market</span><span>Transit</span></div>
+          <div class="market-row"><span class="name">USA</span><span class="transit">[[NEEDS INPUT]]</span></div>
+          <div class="market-row"><span class="name">China</span><span class="transit">[[NEEDS INPUT]]</span></div>
+          <div class="market-row"><span class="name">India</span><span class="transit">[[NEEDS INPUT]]</span></div>
+          <div class="market-row"><span class="name">Sri Lanka</span><span class="transit">[[NEEDS INPUT]]</span></div>
+          <div class="market-row"><span class="name">Vietnam</span><span class="transit">[[NEEDS INPUT]]</span></div>
+          <div class="market-row"><span class="name">Cambodia</span><span class="transit">[[NEEDS INPUT]]</span></div>
+          <div class="market-row"><span class="name">Bangladesh</span><span class="transit">[[NEEDS INPUT]]</span></div>
+          <div class="market-row"><span class="name">Egypt</span><span class="transit">[[NEEDS INPUT]]</span></div>
+          <div class="market-row"><span class="name">Jordan</span><span class="transit">[[NEEDS INPUT]]</span></div>
+          <div class="market-row"><span class="name">Turkey</span><span class="transit">[[NEEDS INPUT]]</span></div>
+          <div class="market-row"><span class="name">Europe</span><span class="transit">[[NEEDS INPUT]]</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="process" class="section rule-top">
+      <div class="kicker">How we work</div>
+      <h2 class="section-title" style="max-width:22ch">Inquiry to container in four steps</h2>
+      <div class="progress-rule" style="margin-top:clamp(48px,6vw,86px)"><div class="progress-rule-fill" style="transform:scaleX(1)"></div></div>
+      <div class="phase-grid">
+        <div class="phase-tile"><div class="dot"></div><div class="no">Phase 01</div><h3>Inquiry</h3><p>Send your requirement. If you already import a comparable fabric, we quote referenced against it rather than against a generic spec.</p><div class="dur">Duration: [[NEEDS INPUT]]</div></div>
+        <div class="phase-tile"><div class="dot"></div><div class="no">Phase 02</div><h3>Specs alignment</h3><p>Terms, pricing and LC settled; certificates shared; construction, GSM and finish locked in writing before anything runs.</p><div class="dur">Duration: [[NEEDS INPUT]]</div></div>
+        <div class="phase-tile"><div class="dot"></div><div class="no">Phase 03</div><h3>Sample validation</h3><p>Free samples in your blends. Test them, confirm the hand and the colour, and approve the lab dip.</p><div class="dur">Duration: [[NEEDS INPUT]]</div></div>
+        <div class="phase-tile"><div class="dot"></div><div class="no">Phase 04</div><h3>Order fulfilment</h3><p>Production runs on our own machines, the container loads in Changshu, and you track it to port. 95% on-time.</p><div class="dur">Duration: [[NEEDS INPUT]]</div></div>
+      </div>
+    </section>
+
+    <section id="sample" class="buyer-zone">
+      <div class="buyer-zone-tag"><div class="kicker">Sample request</div><div class="flag">Inverted — buyer zone</div></div>
+      <div style="padding:clamp(56px,7vw,110px) clamp(80px,9vw,170px) clamp(70px,8vw,130px);display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:clamp(40px,5vw,90px);align-items:start">
+        <div>
+          <h2 style="margin:0;font-family:Archivo,sans-serif;font-weight:700;font-size:clamp(2.2rem,5.4vw,5.6rem);line-height:.9;letter-spacing:-.04em;color:#0D0E10;text-wrap:pretty">Send the spec<span class="accent">.</span> We send the fabric<span class="accent">.</span></h2>
+          <p style="margin:26px 0 0;max-width:48ch;font-size:17px;line-height:1.55;color:#4A4F57;text-wrap:pretty">Samples are free. If you already import a comparable fabric, send the reference and we will quote against it.</p>
+          <div style="margin-top:34px;display:flex;flex-direction:column;gap:10px;font-family:'JetBrains Mono',ui-monospace,monospace;font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:#4A4F57">
+            <span>info@rydertex.com.cn</span>
+            <span>Changshu, Jiangsu, China 215500</span>
+          </div>
+        </div>
+        <form id="sample-form" class="rt-form" style="color:#0D0E10">
+          <label><span>Name</span><input type="text" name="name" required></label>
+          <label><span>Company</span><input type="text" name="company" required></label>
+          <label class="col-full"><span>Email</span><input type="email" name="email" required></label>
+          <label><span>Fabric type</span>
+            <select name="fabric">
+              <option>Single knit</option><option>Double knit / interlock</option><option>Rib</option><option>French terry</option><option>Jacquard</option><option>Fleece</option><option>Sherpa</option><option>Velour</option><option>Warp knit</option><option>Yarn-dye stripe</option><option>Crinkle / seersucker</option><option>Not sure yet</option>
+            </select>
+          </label>
+          <label><span>Target GSM</span><input type="text" name="gsm" placeholder="e.g. 220"></label>
+          <label><span>Quantity</span><input type="text" name="qty" placeholder="kg or yards"></label>
+          <label><span>Market</span><input type="text" name="market" placeholder="e.g. USA"></label>
+          <div class="rt-form-actions">
+            <button type="submit" class="rt-form-submit">Request samples</button>
+            <span id="sample-sent-notice" class="form-notice" hidden>[[NEEDS INPUT: form endpoint — nothing was sent]]</span>
+          </div>
+        </form>
+      </div>
     </section>
   </main>
 
@@ -84,6 +368,7 @@
 
 <script src="js/header.js"></script>
 <script src="js/footer.js"></script>
-<script src="js/fabrics.js"></script>
+<script src="js/reveal.js"></script>
+<script src="js/home.js"></script>
 </body>
 </html>
