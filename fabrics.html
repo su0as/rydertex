@@ -38,12 +38,13 @@
   <main class="main-content">
     <section class="hero">
       <div class="eyebrow">Fabric library</div>
-      <h1>Twelve families<span class="accent-comma">,</span> filtered</h1>
-      <p class="hero-sub">Every family below is knitted, dyed and finished in Changshu. Select the ones you want to feel, and send one consolidated swatch request instead of six emails.</p>
+      <h1>Twenty-four constructions<span class="accent-comma">,</span> filtered</h1>
+      <p class="hero-sub">Twelve fabric families, each in two real constructions — knitted, dyed and finished in Changshu. Filter by structure, composition, weight, gauge, finish, end use and certification, and send one consolidated swatch request instead of six emails.</p>
+      <p class="hero-sub" style="margin-top:14px;color:#2F53E0;font-family:'JetBrains Mono',ui-monospace,monospace;font-size:11.5px;letter-spacing:.08em;text-transform:uppercase">⬤ Provisional specs — derived from published capability ranges, not measured per fabric</p>
     </section>
 
     <div class="filter-bar">
-      <div class="filter-bar-count">Showing <span id="shown-count" class="accent-text">12</span> of 12 families</div>
+      <div class="filter-bar-count">Showing <span id="shown-count" class="accent-text">24</span> of 24 fabrics</div>
       <div class="filter-bar-actions">
         <button type="button" id="filters-toggle" class="btn-ghost filters-toggle">Filters <span id="filters-active-count" class="count-badge">0</span></button>
         <button type="button" id="clear-filters" class="btn-ghost">Clear filters</button>
@@ -67,34 +68,10 @@
         <button type="button" id="filters-aside-close" class="filters-aside-close btn-text">Close ✕</button>
         <div class="filter-group">
           <label for="search-input" class="filter-label">Search</label>
-          <input type="search" id="search-input" placeholder="Family name" class="search-input">
+          <input type="search" id="search-input" placeholder="Family or construction" class="search-input">
         </div>
 
-        <div class="filter-group structure-filters">
-          <div class="filter-group-title">Structure</div>
-          <label class="structure-option"><input type="checkbox" data-structure="Single knit">Single knit</label>
-          <label class="structure-option"><input type="checkbox" data-structure="Double knit">Double knit</label>
-          <label class="structure-option"><input type="checkbox" data-structure="Rib">Rib</label>
-          <label class="structure-option"><input type="checkbox" data-structure="Warp knit">Warp knit</label>
-          <label class="structure-option"><input type="checkbox" data-structure="Jacquard">Jacquard</label>
-          <label class="structure-option"><input type="checkbox" data-structure="Velour">Velour</label>
-          <label class="structure-option"><input type="checkbox" data-structure="Raised / brushed">Raised / brushed</label>
-          <label class="structure-option"><input type="checkbox" data-structure="Seersucker / crinkle">Seersucker / crinkle</label>
-          <label class="structure-option"><input type="checkbox" data-structure="Yarn-dye stripe">Yarn-dye stripe</label>
-        </div>
-
-        <div class="filter-group locked-filters">
-          <div class="filter-group-title">Locked until spec data lands</div>
-          <div class="locked-tags">
-            <span class="locked-tag">Composition</span>
-            <span class="locked-tag">GSM range</span>
-            <span class="locked-tag">Gauge</span>
-            <span class="locked-tag">Finish</span>
-            <span class="locked-tag">End use</span>
-            <span class="locked-tag">Certification</span>
-          </div>
-          <div class="needs-input">[[NEEDS INPUT: per-family GSM, gauge, composition, finish, end use and certification — these six filters go live the moment the data arrives]]</div>
-        </div>
+        <div id="filter-groups"></div>
       </aside>
 
       <div id="fabrics-grid" class="fabrics-grid"></div>

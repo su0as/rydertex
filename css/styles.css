@@ -140,6 +140,9 @@ section,main,#top,article,div,h1,h2,h3{scroll-margin-top:var(--header-h)}
 .fabric-card-no{font-family:'JetBrains Mono',ui-monospace,monospace;font-size:10px;letter-spacing:.1em;color:#5B6169}
 .fabric-card-structure{font-family:'JetBrains Mono',ui-monospace,monospace;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:#8A8F96}
 .fabric-card-needs-input{font-family:'JetBrains Mono',ui-monospace,monospace;font-size:9.5px;letter-spacing:.08em;color:#2F53E0;border:1px dashed rgba(47,83,224,.4);padding:6px 8px}
+.fabric-card-spec-line{font-family:'JetBrains Mono',ui-monospace,monospace;font-size:10px;letter-spacing:.04em;color:#8A8F96;line-height:1.5}
+.provisional-chip{align-self:flex-start;font-family:'JetBrains Mono',ui-monospace,monospace;font-size:8.5px;letter-spacing:.1em;text-transform:uppercase;color:#2F53E0;border:1px solid rgba(47,83,224,.4);padding:3px 7px;border-radius:2px}
+.filter-count{color:#5B6169;font-size:9.5px}
 .fabric-card-actions{margin-top:auto;padding-top:12px;display:flex;flex-direction:column;gap:9px}
 .fabric-card-add{border:1px solid rgba(244,242,238,.16);background:transparent;padding:10px;font-family:'JetBrains Mono',ui-monospace,monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#F4F2EE;cursor:pointer;text-align:left}
 .fabric-card-add.in-basket{background:#2F53E0;border-color:#2F53E0}
@@ -461,6 +464,9 @@ body.theme-light a:hover{color:#0D0E10}
 .detail-kicker{font-family:'JetBrains Mono',ui-monospace,monospace;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#2F53E0}
 .detail-title{margin:18px 0 0;font-family:Archivo,sans-serif;font-weight:700;font-size:clamp(2.1rem,5vw,4.6rem);line-height:.92;letter-spacing:-.04em;color:#F4F2EE;text-wrap:pretty}
 .detail-lede{margin:24px 0 0;max-width:54ch;font-size:17px;line-height:1.55;color:#A8ADB4;text-wrap:pretty}
+.construction-picker{display:flex;gap:8px;flex-wrap:wrap;margin-top:22px}
+.construction-pill{font-family:'JetBrains Mono',ui-monospace,monospace;font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:#A8ADB4;border:1px solid rgba(244,242,238,.16);background:none;padding:9px 13px;cursor:pointer}
+.construction-pill.active{color:#F4F2EE;border-color:#2F53E0;background:rgba(47,83,224,.12)}
 .detail-actions{margin-top:clamp(30px,4vw,44px);display:flex;flex-wrap:wrap;gap:12px;align-items:center}
 
 /* ================================================================
