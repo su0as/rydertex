@@ -89,17 +89,17 @@
       : '';
 
     var specs = [
-      ['Structure', f.structure, '#F4F2EE'],
-      ['Composition', f.composition, '#F4F2EE'],
-      ['Weight', f.gsm + ' GSM', '#F4F2EE'],
-      ['Gauge', f.gauge, '#F4F2EE'],
-      ['Width', f.width, '#F4F2EE'],
-      ['Finish', f.finish, '#F4F2EE'],
-      ['End use', f.endUse.join(' · '), '#A8ADB4'],
-      ['Certification', f.certifications.length ? f.certifications.join(', ') + ' (mill-wide)' : '—', '#A8ADB4'],
-      ['MOQ', f.moq, '#F4F2EE'],
-      ['Lead time', f.leadTime, '#F4F2EE'],
-      ['Dyed in', f.dyeHouse, '#A8ADB4']
+      ['Structure', f.structure, '#0D0E10'],
+      ['Composition', f.composition, '#0D0E10'],
+      ['Weight', f.gsm + ' GSM', '#0D0E10'],
+      ['Gauge', f.gauge, '#0D0E10'],
+      ['Width', f.width, '#0D0E10'],
+      ['Finish', f.finish, '#0D0E10'],
+      ['End use', f.endUse.join(' · '), '#4A4F57'],
+      ['Certification', f.certifications.length ? f.certifications.join(', ') + ' (mill-wide)' : '—', '#4A4F57'],
+      ['MOQ', f.moq, '#0D0E10'],
+      ['Lead time', f.leadTime, '#0D0E10'],
+      ['Dyed in', f.dyeHouse, '#4A4F57']
     ];
     els.specs.innerHTML = specs.map(function (s) {
       return '<div class="spec-row"><span class="k">' + esc(s[0]) + '</span><span class="v" style="color:' + s[2] + '">' + esc(s[1]) + '</span></div>';
