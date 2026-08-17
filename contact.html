@@ -3,8 +3,27 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<script>if(location.search.indexOf("draft=1")>-1){localStorage.setItem("rt-draft","1")}else if(location.search.indexOf("draft=0")>-1){localStorage.removeItem("rt-draft")}if(localStorage.getItem("rt-draft")==="1")document.documentElement.classList.add("draft-on")</script>
 <title>Request a Sample — RyderTex | Changshu Knitted Fabric Mill</title>
 <meta name="description" content="Request free knitted fabric samples or a quote from RyderTex, Changshu. Send a construction or a reference fabric and we quote against it.">
+<link rel="canonical" href="https://su0as.github.io/rydertex/contact.html">
+<link rel="alternate" hreflang="en" href="https://su0as.github.io/rydertex/contact.html">
+<!-- hreflang="zh" to be added once the Chinese translation ships (see /draft-status.html) -->
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" href="assets/icons/icon-512.png" sizes="512x512">
+<link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="RyderTex">
+<meta property="og:title" content="Request a Sample — RyderTex | Changshu Knitted Fabric Mill">
+<meta property="og:description" content="Request free knitted fabric samples or a quote from RyderTex, Changshu. Send a construction or a reference fabric and we quote against it.">
+<meta property="og:image" content="https://su0as.github.io/rydertex/assets/og/og-default.jpg">
+<meta property="og:url" content="https://su0as.github.io/rydertex/contact.html">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Request a Sample — RyderTex | Changshu Knitted Fabric Mill">
+<meta name="twitter:description" content="Request free knitted fabric samples or a quote from RyderTex, Changshu. Send a construction or a reference fabric and we quote against it.">
+<meta name="twitter:image" content="https://su0as.github.io/rydertex/assets/og/og-default.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&family=Inter:wght@400;500&family=Noto+Sans+SC:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/styles.css">
@@ -44,7 +63,7 @@
         <label class="col-full"><span>Reference fabric or notes</span><textarea name="notes" rows="3" style="resize:vertical"></textarea></label>
         <div class="rt-form-actions">
           <button type="submit" class="rt-form-submit">Request samples</button>
-          <span id="sent-notice" class="form-notice" hidden>[[NEEDS INPUT: form endpoint — nothing was sent]]</span>
+          <span id="sent-notice" class="sent-notice" hidden>Thanks — we'll follow up by email shortly.<span class="draft-note"> [[NEEDS INPUT: form endpoint — nothing was actually sent]]</span></span>
         </div>
       </form>
 
@@ -54,7 +73,8 @@
           <div style="margin-top:18px;display:flex;flex-direction:column;gap:10px;font-family:'JetBrains Mono',ui-monospace,monospace;font-size:12px;letter-spacing:.08em;line-height:1.8;color:#4A4F57">
             <a href="mailto:info@rydertex.com.cn" style="color:#0D0E10">info@rydertex.com.cn</a>
             <a href="https://rydertextiles.com" style="color:#4A4F57">rydertextiles.com</a>
-            <span style="color:#2F53E0">[[NEEDS INPUT: telephone]]</span>
+            <span class="draft-note" style="color:#2F53E0">[[NEEDS INPUT: telephone]]</span>
+            <span class="draft-fallback">By email — see above</span>
           </div>
         </div>
         <div>
@@ -63,7 +83,8 @@
         </div>
         <div>
           <div class="tag-group-label" style="border-bottom-color:rgba(13,14,16,.14)">WeChat</div>
-          <div style="margin-top:18px;width:118px;height:118px;border:1px dashed rgba(47,83,224,.5);display:grid;place-items:center;text-align:center;padding:12px;font-family:'JetBrains Mono',ui-monospace,monospace;font-size:9px;letter-spacing:.08em;line-height:1.6;text-transform:uppercase;color:#2F53E0">[[NEEDS INPUT: WeChat QR]]</div>
+          <div class="wechat-qr-box" style="margin-top:18px;width:118px;height:118px;border:1px dashed rgba(47,83,224,.5);display:grid;place-items:center;text-align:center;padding:12px;font-family:'JetBrains Mono',ui-monospace,monospace;font-size:9px;letter-spacing:.08em;line-height:1.6;text-transform:uppercase;color:#2F53E0">[[NEEDS INPUT: WeChat QR]]</div>
+          <p class="draft-fallback" style="margin:18px 0 0;font-family:'JetBrains Mono',ui-monospace,monospace;font-size:11px;letter-spacing:.08em;line-height:1.7;color:#4A4F57;max-width:150px">QR code available on request — email us.</p>
         </div>
         <div>
           <div class="tag-group-label" style="border-bottom-color:rgba(13,14,16,.14)">What happens next</div>

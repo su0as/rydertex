@@ -28,6 +28,7 @@
         <div class="footer-col">
           <span class="footer-label">WeChat</span>
           <div class="footer-qr">[[NEEDS INPUT: WeChat QR]]</div>
+          <div class="draft-fallback footer-qr-fallback">QR code available on request — email us.</div>
         </div>
       </div>
       <div class="footer-bottom">

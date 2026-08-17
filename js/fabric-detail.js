@@ -8,7 +8,8 @@
   'use strict';
 
   var A = 'assets/rydertex-assets/';
-  var NI = '[[NEEDS INPUT]]';
+  var DRAFT = document.documentElement.classList.contains('draft-on');
+  var NI = DRAFT ? '[[NEEDS INPUT]]' : '—';
 
   var FABRICS = [
     ['01-stripe-yarn-dye', 'Yarn-Dye Stripe', 'Yarn-dye stripe', 'Stripes knitted from pre-dyed yarn rather than printed after the fact, so the colour goes right through the loop and survives wash after wash.', ['apparel-tee-taupe.png', 'apparel-knit-crop-jogger-set.png']],
@@ -81,6 +82,26 @@
     els.specs.innerHTML = specs.map(function (s) {
       return '<div class="spec-row"><span class="k">' + esc(s[0]) + '</span><span class="v" style="color:' + s[2] + '">' + esc(s[1]) + '</span></div>';
     }).join('');
+
+    var jsonld = document.getElementById('product-jsonld');
+    if (jsonld) {
+      jsonld.textContent = JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'Product',
+        name: name + ' — RyderTex Knitted Fabric',
+        description: body,
+        image: 'https://su0as.github.io/rydertex/' + img,
+        category: structure,
+        brand: { '@type': 'Brand', name: 'RyderTex' },
+        manufacturer: { '@type': 'Organization', name: 'Changshu Ryder Textile Co., Ltd.' },
+        offers: {
+          '@type': 'Offer',
+          availability: 'https://schema.org/InStock',
+          url: 'https://su0as.github.io/rydertex/fabric-detail.html?fabric=' + id,
+          priceSpecification: { '@type': 'PriceSpecification', description: 'Quoted per order — contact for pricing' }
+        }
+      });
+    }
 
     els.picker.innerHTML = FABRICS.map(function (f, i) {
       var active = i === currentIdx;

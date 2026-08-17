@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Draft Status — RyderTex (internal)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+<style>
+  .gap-table{width:100%;border-collapse:collapse;margin-top:24px}
+  .gap-table th{text-align:left;font-family:'JetBrains Mono',ui-monospace,monospace;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:#5B6169;padding:0 14px 10px 0;border-bottom:1px solid rgba(244,242,238,.14)}
+  .gap-table td{padding:12px 14px 12px 0;border-bottom:1px solid rgba(244,242,238,.1);font-size:14px;line-height:1.5;color:#A8ADB4;vertical-align:top}
+  .gap-table td:first-child{color:#F4F2EE;font-weight:500;white-space:nowrap}
+  .gap-table .pages{font-family:'JetBrains Mono',ui-monospace,monospace;font-size:11px;color:#8A8F96}
+  .gap-section{margin-top:56px}
+</style>
+</head>
+<body>
+<div class="page-wrap">
+  <main class="main-content">
+    <section class="page-hero section-tight">
+      <div class="kicker">Internal · noindex</div>
+      <h1 style="max-width:26ch">Everything the site is still waiting on</h1>
+      <p>Every <code>[[NEEDS INPUT]]</code> token and locked feature on the live site, in one list, so nothing gets lost. Toggle <code>?draft=1</code> on any page to see these rendered in place (persists via localStorage until you visit with <code>?draft=0</code>). This page is not linked from the site nav and is excluded from search indexing.</p>
+    </section>
+
+    <section class="section" style="padding-top:0">
+      <div class="gap-section">
+        <h2 class="section-title" style="font-size:clamp(1.4rem,2.4vw,2rem);max-width:none">Fabric specs</h2>
+        <table class="gap-table">
+          <tr><th>Field</th><th>What's missing</th><th>Where</th></tr>
+          <tr><td>Composition</td><td>Per-fabric fibre blend %</td><td class="pages">fabrics.html, fabric-detail.html</td></tr>
+          <tr><td>GSM / weight</td><td>Per-fabric weight in grams/m²</td><td class="pages">fabrics.html, fabric-detail.html</td></tr>
+          <tr><td>Gauge</td><td>Per-fabric knitting gauge</td><td class="pages">fabrics.html, fabric-detail.html</td></tr>
+          <tr><td>Width</td><td>Per-fabric finished width</td><td class="pages">fabric-detail.html</td></tr>
+          <tr><td>Finish</td><td>Per-fabric finishing route</td><td class="pages">fabric-detail.html</td></tr>
+          <tr><td>MOQ</td><td>Minimum order quantity per fabric</td><td class="pages">fabric-detail.html</td></tr>
+          <tr><td>Lead time</td><td>Production lead time per fabric</td><td class="pages">fabric-detail.html</td></tr>
+          <tr><td>End use mapping</td><td>Which fabric family made each of the 14 apparel cutouts</td><td class="pages">index.html, fabric-detail.html</td></tr>
+        </table>
+      </div>
+
+      <div class="gap-section">
+        <h2 class="section-title" style="font-size:clamp(1.4rem,2.4vw,2rem);max-width:none">Certifications</h2>
+        <table class="gap-table">
+          <tr><th>Standard</th><th>What's missing</th><th>Where</th></tr>
+          <tr><td>OEKO-TEX</td><td>Have it — 22.HCN.48110, Hohenstein HTTI</td><td class="pages">✓ live</td></tr>
+          <tr><td>FSC</td><td>Have it — FSC® C172977</td><td class="pages">✓ live</td></tr>
+          <tr><td>GRS</td><td>Certificate number and scope</td><td class="pages">index.html, sustainability.html</td></tr>
+          <tr><td>RCS</td><td>Certificate number and scope</td><td class="pages">index.html, sustainability.html</td></tr>
+          <tr><td>BCI</td><td>Certificate number and scope</td><td class="pages">index.html, sustainability.html</td></tr>
+          <tr><td>TENCEL™</td><td>Licence reference</td><td class="pages">index.html, sustainability.html</td></tr>
+          <tr><td>Inditex</td><td>Supplier ID or audit date</td><td class="pages">index.html, sustainability.html</td></tr>
+          <tr><td>Environmental data</td><td>Water, energy or emissions figures — none claimed without a source</td><td class="pages">sustainability.html</td></tr>
+        </table>
+      </div>
+
+      <div class="gap-section">
+        <h2 class="section-title" style="font-size:clamp(1.4rem,2.4vw,2rem);max-width:none">Company &amp; contact</h2>
+        <table class="gap-table">
+          <tr><th>Field</th><th>What's missing</th><th>Where</th></tr>
+          <tr><td>Employees</td><td>Headcount</td><td class="pages">company.html</td></tr>
+          <tr><td>Annual output</td><td>Volume/revenue figure</td><td class="pages">company.html</td></tr>
+          <tr><td>Leadership</td><td>Names, titles, photography</td><td class="pages">company.html</td></tr>
+          <tr><td>Company timeline</td><td>Founding + dye-house + certification milestone dates</td><td class="pages">company.html (not yet built)</td></tr>
+          <tr><td>Telephone</td><td>Direct phone number</td><td class="pages">contact.html</td></tr>
+          <tr><td>WeChat QR</td><td>QR code image</td><td class="pages">contact.html, footer (all pages)</td></tr>
+          <tr><td>Form endpoint</td><td>Sample-request forms don't submit anywhere yet (Formspree / Resend / a function)</td><td class="pages">contact.html, index.html</td></tr>
+          <tr><td>Lab standards</td><td>Test standards and equipment list</td><td class="pages">facilities.html</td></tr>
+        </table>
+      </div>
+
+      <div class="gap-section">
+        <h2 class="section-title" style="font-size:clamp(1.4rem,2.4vw,2rem);max-width:none">Logistics</h2>
+        <table class="gap-table">
+          <tr><th>Field</th><th>What's missing</th><th>Where</th></tr>
+          <tr><td>Transit times</td><td>Per-market shipping duration (11 markets)</td><td class="pages">global.html, index.html</td></tr>
+          <tr><td>Engagement phases</td><td>Duration per phase (inquiry → fulfilment)</td><td class="pages">index.html</td></tr>
+        </table>
+      </div>
+
+      <div class="gap-section">
+        <h2 class="section-title" style="font-size:clamp(1.4rem,2.4vw,2rem);max-width:none">Other</h2>
+        <table class="gap-table">
+          <tr><th>Item</th><th>Status</th><th>Where</th></tr>
+          <tr><td>中文 (Chinese)</td><td>Toggle is built, translation not started</td><td class="pages">every page header/footer</td></tr>
+          <tr><td>Downloadable spec PDF</td><td>Not built</td><td class="pages">fabric-detail.html</td></tr>
+          <tr><td>rydertextiles.com</td><td>Linked in footer — domain does not currently resolve</td><td class="pages">footer (all pages)</td></tr>
+          <tr><td>Higher-res photography / video</td><td>Would strengthen Facilities and Capabilities</td><td class="pages">facilities.html, capabilities.html</td></tr>
+        </table>
+      </div>
+    </section>
+  </main>
+</div>
+</body>
+</html>

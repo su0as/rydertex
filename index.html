@@ -3,8 +3,27 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<script>if(location.search.indexOf("draft=1")>-1){localStorage.setItem("rt-draft","1")}else if(location.search.indexOf("draft=0")>-1){localStorage.removeItem("rt-draft")}if(localStorage.getItem("rt-draft")==="1")document.documentElement.classList.add("draft-on")</script>
 <title>RyderTex — Knitted Fabric Mill, Changshu | Yarn to Container</title>
 <meta name="description" content="Changshu Ryder Textile: vertically integrated knitted fabric mill in Changshu, Jiangsu. 300+ circular knitting machines, 3 dye houses, 100+ tonnes dyed per day. GRS and OEKO-TEX certified.">
+<link rel="canonical" href="https://su0as.github.io/rydertex/index.html">
+<link rel="alternate" hreflang="en" href="https://su0as.github.io/rydertex/index.html">
+<!-- hreflang="zh" to be added once the Chinese translation ships (see /draft-status.html) -->
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" href="assets/icons/icon-512.png" sizes="512x512">
+<link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="RyderTex">
+<meta property="og:title" content="RyderTex — Knitted Fabric Mill, Changshu | Yarn to Container">
+<meta property="og:description" content="Changshu Ryder Textile: vertically integrated knitted fabric mill in Changshu, Jiangsu. 300+ circular knitting machines, 3 dye houses, 100+ tonnes dyed per day. GRS and OEKO-TEX certified.">
+<meta property="og:image" content="https://su0as.github.io/rydertex/assets/og/og-default.jpg">
+<meta property="og:url" content="https://su0as.github.io/rydertex/index.html">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="RyderTex — Knitted Fabric Mill, Changshu | Yarn to Container">
+<meta name="twitter:description" content="Changshu Ryder Textile: vertically integrated knitted fabric mill in Changshu, Jiangsu. 300+ circular knitting machines, 3 dye houses, 100+ tonnes dyed per day. GRS and OEKO-TEX certified.">
+<meta name="twitter:image" content="https://su0as.github.io/rydertex/assets/og/og-default.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&family=Inter:wght@400;500&family=Noto+Sans+SC:wght@400;500&display=swap" rel="stylesheet">
 <link rel="preload" as="image" href="assets/rydertex-assets/03-factory/dyehouse-finishing-line.jpeg" fetchpriority="high">
@@ -206,7 +225,7 @@
     </section>
 
     <section class="buyer-zone">
-      <div class="buyer-zone-tag"><div class="kicker">End use · what it becomes</div><div class="flag">Inverted — buyer zone</div></div>
+      <div class="buyer-zone-tag"><div class="kicker">End use · what it becomes</div></div>
       <div class="section" style="padding-top:clamp(56px,7vw,110px);padding-bottom:clamp(70px,8vw,130px)">
         <div class="section-head">
           <h2 class="section-title" style="max-width:20ch">What the fabric becomes</h2>
@@ -250,12 +269,12 @@
         <div class="kicker">Certifications</div>
         <div class="certs-grid">
           <div class="cert-card"><div class="badge"><img src="assets/rydertex-assets/07-derived/cert-oeko-tex.png" alt="OEKO-TEX Standard 100 certification mark" loading="lazy" width="240" height="180"></div><div style="display:flex;flex-direction:column;gap:7px;min-width:0"><span class="name">OEKO-TEX Standard 100</span><span class="num" style="color:#F4F2EE">22.HCN.48110 · Hohenstein HTTI</span></div></div>
-          <div class="cert-card"><div class="badge"><img src="assets/rydertex-assets/07-derived/cert-grs.png" alt="Global Recycled Standard certification mark" loading="lazy" width="240" height="180"></div><div style="display:flex;flex-direction:column;gap:7px;min-width:0"><span class="name">Global Recycled Standard</span><span class="num" style="color:#2F53E0">[[NEEDS INPUT]]</span></div></div>
-          <div class="cert-card"><div class="badge"><img src="assets/rydertex-assets/07-derived/cert-rcs.png" alt="Recycled Blended Claim Standard certification mark" loading="lazy" width="240" height="180"></div><div style="display:flex;flex-direction:column;gap:7px;min-width:0"><span class="name">Recycled Claim Standard</span><span class="num" style="color:#2F53E0">[[NEEDS INPUT]]</span></div></div>
-          <div class="cert-card"><div class="badge"><img src="assets/rydertex-assets/07-derived/cert-bci.png" alt="Better Cotton Initiative mark" loading="lazy" width="240" height="180"></div><div style="display:flex;flex-direction:column;gap:7px;min-width:0"><span class="name">Better Cotton Initiative</span><span class="num" style="color:#2F53E0">[[NEEDS INPUT]]</span></div></div>
+          <div class="cert-card"><div class="badge"><img src="assets/rydertex-assets/07-derived/cert-grs.png" alt="Global Recycled Standard certification mark" loading="lazy" width="240" height="180"></div><div style="display:flex;flex-direction:column;gap:7px;min-width:0"><span class="name">Global Recycled Standard</span><span class="num" style="color:#2F53E0"><span class="draft-note">[[NEEDS INPUT]]</span><span class="draft-fallback">—</span></span></div></div>
+          <div class="cert-card"><div class="badge"><img src="assets/rydertex-assets/07-derived/cert-rcs.png" alt="Recycled Blended Claim Standard certification mark" loading="lazy" width="240" height="180"></div><div style="display:flex;flex-direction:column;gap:7px;min-width:0"><span class="name">Recycled Claim Standard</span><span class="num" style="color:#2F53E0"><span class="draft-note">[[NEEDS INPUT]]</span><span class="draft-fallback">—</span></span></div></div>
+          <div class="cert-card"><div class="badge"><img src="assets/rydertex-assets/07-derived/cert-bci.png" alt="Better Cotton Initiative mark" loading="lazy" width="240" height="180"></div><div style="display:flex;flex-direction:column;gap:7px;min-width:0"><span class="name">Better Cotton Initiative</span><span class="num" style="color:#2F53E0"><span class="draft-note">[[NEEDS INPUT]]</span><span class="draft-fallback">—</span></span></div></div>
           <div class="cert-card"><div class="badge"><img src="assets/rydertex-assets/07-derived/cert-fsc.png" alt="FSC Mix certification mark" loading="lazy" width="240" height="180"></div><div style="display:flex;flex-direction:column;gap:7px;min-width:0"><span class="name">FSC Mix</span><span class="num" style="color:#F4F2EE">FSC® C172977</span></div></div>
-          <div class="cert-card"><div class="badge"><img src="assets/rydertex-assets/07-derived/cert-tencel.png" alt="TENCEL mark" loading="lazy" width="240" height="180"></div><div style="display:flex;flex-direction:column;gap:7px;min-width:0"><span class="name">TENCEL™ licensed</span><span class="num" style="color:#2F53E0">[[NEEDS INPUT]]</span></div></div>
-          <div class="cert-card"><div class="badge"><img src="assets/rydertex-assets/07-derived/cert-inditex.png" alt="Inditex mark" loading="lazy" width="240" height="180"></div><div style="display:flex;flex-direction:column;gap:7px;min-width:0"><span class="name">Inditex approved supplier</span><span class="num" style="color:#2F53E0">[[NEEDS INPUT]]</span></div></div>
+          <div class="cert-card"><div class="badge"><img src="assets/rydertex-assets/07-derived/cert-tencel.png" alt="TENCEL mark" loading="lazy" width="240" height="180"></div><div style="display:flex;flex-direction:column;gap:7px;min-width:0"><span class="name">TENCEL™ licensed</span><span class="num" style="color:#2F53E0"><span class="draft-note">[[NEEDS INPUT]]</span><span class="draft-fallback">—</span></span></div></div>
+          <div class="cert-card"><div class="badge"><img src="assets/rydertex-assets/07-derived/cert-inditex.png" alt="Inditex mark" loading="lazy" width="240" height="180"></div><div style="display:flex;flex-direction:column;gap:7px;min-width:0"><span class="name">Inditex approved supplier</span><span class="num" style="color:#2F53E0"><span class="draft-note">[[NEEDS INPUT]]</span><span class="draft-fallback">—</span></span></div></div>
         </div>
       </div>
     </section>
@@ -301,17 +320,17 @@
         </div>
         <div style="min-width:0">
           <div class="market-table-head"><span>Market</span><span>Transit</span></div>
-          <div class="market-row"><span class="name">USA</span><span class="transit">[[NEEDS INPUT]]</span></div>
-          <div class="market-row"><span class="name">China</span><span class="transit">[[NEEDS INPUT]]</span></div>
-          <div class="market-row"><span class="name">India</span><span class="transit">[[NEEDS INPUT]]</span></div>
-          <div class="market-row"><span class="name">Sri Lanka</span><span class="transit">[[NEEDS INPUT]]</span></div>
-          <div class="market-row"><span class="name">Vietnam</span><span class="transit">[[NEEDS INPUT]]</span></div>
-          <div class="market-row"><span class="name">Cambodia</span><span class="transit">[[NEEDS INPUT]]</span></div>
-          <div class="market-row"><span class="name">Bangladesh</span><span class="transit">[[NEEDS INPUT]]</span></div>
-          <div class="market-row"><span class="name">Egypt</span><span class="transit">[[NEEDS INPUT]]</span></div>
-          <div class="market-row"><span class="name">Jordan</span><span class="transit">[[NEEDS INPUT]]</span></div>
-          <div class="market-row"><span class="name">Turkey</span><span class="transit">[[NEEDS INPUT]]</span></div>
-          <div class="market-row"><span class="name">Europe</span><span class="transit">[[NEEDS INPUT]]</span></div>
+          <div class="market-row"><span class="name">USA</span><span class="transit"><span class="draft-note">[[NEEDS INPUT]]</span><span class="draft-fallback">—</span></span></div>
+          <div class="market-row"><span class="name">China</span><span class="transit"><span class="draft-note">[[NEEDS INPUT]]</span><span class="draft-fallback">—</span></span></div>
+          <div class="market-row"><span class="name">India</span><span class="transit"><span class="draft-note">[[NEEDS INPUT]]</span><span class="draft-fallback">—</span></span></div>
+          <div class="market-row"><span class="name">Sri Lanka</span><span class="transit"><span class="draft-note">[[NEEDS INPUT]]</span><span class="draft-fallback">—</span></span></div>
+          <div class="market-row"><span class="name">Vietnam</span><span class="transit"><span class="draft-note">[[NEEDS INPUT]]</span><span class="draft-fallback">—</span></span></div>
+          <div class="market-row"><span class="name">Cambodia</span><span class="transit"><span class="draft-note">[[NEEDS INPUT]]</span><span class="draft-fallback">—</span></span></div>
+          <div class="market-row"><span class="name">Bangladesh</span><span class="transit"><span class="draft-note">[[NEEDS INPUT]]</span><span class="draft-fallback">—</span></span></div>
+          <div class="market-row"><span class="name">Egypt</span><span class="transit"><span class="draft-note">[[NEEDS INPUT]]</span><span class="draft-fallback">—</span></span></div>
+          <div class="market-row"><span class="name">Jordan</span><span class="transit"><span class="draft-note">[[NEEDS INPUT]]</span><span class="draft-fallback">—</span></span></div>
+          <div class="market-row"><span class="name">Turkey</span><span class="transit"><span class="draft-note">[[NEEDS INPUT]]</span><span class="draft-fallback">—</span></span></div>
+          <div class="market-row"><span class="name">Europe</span><span class="transit"><span class="draft-note">[[NEEDS INPUT]]</span><span class="draft-fallback">—</span></span></div>
         </div>
       </div>
     </section>
@@ -321,15 +340,15 @@
       <h2 class="section-title" style="max-width:22ch">Inquiry to container in four steps</h2>
       <div class="progress-rule" style="margin-top:clamp(48px,6vw,86px)"><div class="progress-rule-fill" style="transform:scaleX(1)"></div></div>
       <div class="phase-grid">
-        <div class="phase-tile"><div class="dot"></div><div class="no">Phase 01</div><h3>Inquiry</h3><p>Send your requirement. If you already import a comparable fabric, we quote referenced against it rather than against a generic spec.</p><div class="dur">Duration: [[NEEDS INPUT]]</div></div>
-        <div class="phase-tile"><div class="dot"></div><div class="no">Phase 02</div><h3>Specs alignment</h3><p>Terms, pricing and LC settled; certificates shared; construction, GSM and finish locked in writing before anything runs.</p><div class="dur">Duration: [[NEEDS INPUT]]</div></div>
-        <div class="phase-tile"><div class="dot"></div><div class="no">Phase 03</div><h3>Sample validation</h3><p>Free samples in your blends. Test them, confirm the hand and the colour, and approve the lab dip.</p><div class="dur">Duration: [[NEEDS INPUT]]</div></div>
-        <div class="phase-tile"><div class="dot"></div><div class="no">Phase 04</div><h3>Order fulfilment</h3><p>Production runs on our own machines, the container loads in Changshu, and you track it to port. 95% on-time.</p><div class="dur">Duration: [[NEEDS INPUT]]</div></div>
+        <div class="phase-tile"><div class="dot"></div><div class="no">Phase 01</div><h3>Inquiry</h3><p>Send your requirement. If you already import a comparable fabric, we quote referenced against it rather than against a generic spec.</p><div class="dur">Duration: <span class="draft-note">[[NEEDS INPUT]]</span><span class="draft-fallback">—</span></div></div>
+        <div class="phase-tile"><div class="dot"></div><div class="no">Phase 02</div><h3>Specs alignment</h3><p>Terms, pricing and LC settled; certificates shared; construction, GSM and finish locked in writing before anything runs.</p><div class="dur">Duration: <span class="draft-note">[[NEEDS INPUT]]</span><span class="draft-fallback">—</span></div></div>
+        <div class="phase-tile"><div class="dot"></div><div class="no">Phase 03</div><h3>Sample validation</h3><p>Free samples in your blends. Test them, confirm the hand and the colour, and approve the lab dip.</p><div class="dur">Duration: <span class="draft-note">[[NEEDS INPUT]]</span><span class="draft-fallback">—</span></div></div>
+        <div class="phase-tile"><div class="dot"></div><div class="no">Phase 04</div><h3>Order fulfilment</h3><p>Production runs on our own machines, the container loads in Changshu, and you track it to port. 95% on-time.</p><div class="dur">Duration: <span class="draft-note">[[NEEDS INPUT]]</span><span class="draft-fallback">—</span></div></div>
       </div>
     </section>
 
     <section id="sample" class="buyer-zone">
-      <div class="buyer-zone-tag"><div class="kicker">Sample request</div><div class="flag">Inverted — buyer zone</div></div>
+      <div class="buyer-zone-tag"><div class="kicker">Sample request</div></div>
       <div style="padding:clamp(56px,7vw,110px) var(--gutter) clamp(70px,8vw,130px);display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:clamp(40px,5vw,90px);align-items:start">
         <div>
           <h2 style="margin:0;font-family:Archivo,sans-serif;font-weight:700;font-size:clamp(2.2rem,5.4vw,5.6rem);line-height:.9;letter-spacing:-.04em;color:#0D0E10;text-wrap:pretty">Send the spec<span class="accent">.</span> We send the fabric<span class="accent">.</span></h2>
@@ -353,7 +372,7 @@
           <label><span>Market</span><input type="text" name="market" placeholder="e.g. USA"></label>
           <div class="rt-form-actions">
             <button type="submit" class="rt-form-submit">Request samples</button>
-            <span id="sample-sent-notice" class="form-notice" hidden>[[NEEDS INPUT: form endpoint — nothing was sent]]</span>
+            <span id="sample-sent-notice" class="sent-notice" hidden>Thanks — we'll follow up by email shortly.<span class="draft-note"> [[NEEDS INPUT: form endpoint — nothing was actually sent]]</span></span>
           </div>
         </form>
       </div>
