@@ -266,9 +266,12 @@ body.page-home .site-header:not(.scrolled) .nav-toggle span{background:#F4F2EE}
 .tag-list{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}
 .tag-chip{font-family:'JetBrains Mono',ui-monospace,monospace;font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:#4A4F57;border:1px solid rgba(13,14,16,.14);padding:8px 11px}
 
-/* Marks wall (brand logos) */
-.marks-wall{display:flex;flex-wrap:wrap;justify-content:center;gap:1px;background:rgba(13,14,16,.14);border:1px solid rgba(13,14,16,.14)}
-.marks-tile{flex:1 1 180px;max-width:20%;background:#F4F2EE;display:grid;place-items:center;padding:34px 22px;min-height:112px;transition:background .4s}
+/* Marks wall (brand logos). Grid lines come from per-tile borders rather
+   than background bleeding through flex gaps, so a short last row (odd tile
+   counts don't fill evenly) blends into the page background instead of
+   showing as a highlighted block. */
+.marks-wall{display:flex;flex-wrap:wrap;justify-content:center;background:#F4F2EE;border:1px solid rgba(13,14,16,.14)}
+.marks-tile{flex:1 1 180px;max-width:20%;background:#F4F2EE;display:grid;place-items:center;padding:34px 22px;min-height:112px;transition:background .4s;border-right:1px solid rgba(13,14,16,.14);border-bottom:1px solid rgba(13,14,16,.14)}
 .marks-tile:hover{background:#FFFFFF}
 @media (max-width:768px){
   .marks-tile{max-width:50%}
