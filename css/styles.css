@@ -284,8 +284,8 @@ body.page-home .site-header:not(.scrolled) .nav-toggle span{background:#F4F2EE}
 .cert-card .num{font-family:'JetBrains Mono',ui-monospace,monospace;font-size:10.5px;letter-spacing:.08em;word-break:break-word}
 
 /* Certifications grid (Sustainability page — full article cards) */
-.cert-article-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,290px),1fr));gap:16px}
-.cert-article{border:1px solid rgba(13,14,16,.14);background:#FFFFFF;display:flex;flex-direction:column;transition:border-color .35s}
+.cert-article-grid{display:flex;flex-wrap:wrap;justify-content:center;gap:16px}
+.cert-article{flex:1 1 290px;max-width:340px;border:1px solid rgba(13,14,16,.14);background:#FFFFFF;display:flex;flex-direction:column;transition:border-color .35s}
 .cert-article:hover{border-color:rgba(47,83,224,.55)}
 .cert-article .badge{background:#FFFFFF;border-bottom:1px solid rgba(13,14,16,.08);padding:22px;display:grid;place-items:center;min-height:118px}
 .cert-article .badge img{max-height:74px;max-width:100%;object-fit:contain}
@@ -365,11 +365,10 @@ body.page-home .site-header:not(.scrolled) .nav-toggle span{background:#F4F2EE}
 .map-wrap img.base{width:100%;height:auto;filter:grayscale(1) brightness(1.04) contrast(1.06);opacity:.6}
 .map-wrap svg.overlay{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
 .map-legend{margin-top:18px;font-family:'JetBrains Mono',ui-monospace,monospace;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:#8A8F96}
-.market-table-head{display:grid;grid-template-columns:1fr auto;gap:20px;padding-bottom:11px;border-bottom:1px solid rgba(13,14,16,.14);font-family:'JetBrains Mono',ui-monospace,monospace;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:#8A8F96}
-.market-row{display:grid;grid-template-columns:1fr auto;gap:20px;align-items:center;padding:14px 0;border-bottom:1px solid rgba(13,14,16,.14);transition:background .3s}
-.market-row:hover,.market-row.is-hover{background:#FFFFFF}
-.market-row .name{font-family:Archivo,sans-serif;font-weight:500;font-size:17px;letter-spacing:-.01em;color:#0D0E10}
-.market-row .transit{font-family:'JetBrains Mono',ui-monospace,monospace;font-size:10.5px;letter-spacing:.08em;color:#2F53E0}
+.market-list{display:flex;flex-wrap:wrap;gap:10px 12px}
+.market-row{display:inline-flex;align-items:center;padding:12px 18px;border:1px solid rgba(13,14,16,.14);transition:background .3s,border-color .3s}
+.market-row:hover,.market-row.is-hover{background:#FFFFFF;border-color:rgba(47,83,224,.45)}
+.market-row .name{font-family:Archivo,sans-serif;font-weight:500;font-size:16px;letter-spacing:-.01em;color:#0D0E10}
 .map-wrap svg.overlay [data-node]{cursor:pointer;transition:r .2s}
 .map-wrap svg.overlay [data-node].is-hover{fill:#0D0E10;stroke:#0D0E10}
 
@@ -589,13 +588,6 @@ html.draft-on .draft-fallback{display:none}
   .chapter-specs .row{border-bottom-color:rgba(13,14,16,.14)}
   .chapter-specs .row .k{color:#5B6169}
   .chapter-specs .row .v{color:#0D0E10}
-}
-
-/* ---- Market tables: stack name/transit on very small screens ---- */
-@media (max-width:480px){
-  .market-table-head{display:none}
-  .market-row{grid-template-columns:1fr;gap:2px;padding:12px 0}
-  .market-row .transit{color:#8A8F96;font-size:10px}
 }
 
 /* ---- General narrow-screen tightening ---- */
