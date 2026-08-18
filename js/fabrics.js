@@ -1,4 +1,4 @@
-// Fabrics page logic. Loads data/fabrics.json (24 SKUs across 12 families)
+// Fabrics page logic. Loads data/fabrics.json (25 SKUs across 12 families)
 // and drives all 7 filters (structure, composition, GSM, gauge, finish, end
 // use, certification) plus search and the swatch-request basket persisted
 // to localStorage under 'rt-sample-basket'.
@@ -143,10 +143,13 @@
   function cardHtml(f) {
     var inBasket = state.basket.indexOf(f.id) !== -1;
     var img = SWATCH_DIR + f.familyId + '.png';
+    var imgBase = SWATCH_DIR + f.familyId;
     return (
       '<article class="fabric-card">' +
         '<a href="../fabric-detail/?fabric=' + esc(f.id) + '" class="fabric-card-link">' +
+          '<picture><source srcset="' + esc(imgBase) + '.avif" type="image/avif"><source srcset="' + esc(imgBase) + '.webp" type="image/webp">' +
           '<img src="' + esc(img) + '" alt="' + esc(f.family) + ' swatch — ' + esc(f.name) + '" width="900" height="700" loading="lazy" class="fabric-card-img">' +
+          '</picture>' +
         '</a>' +
         '<div class="fabric-card-body">' +
           '<div class="fabric-card-head">' +
@@ -168,9 +171,12 @@
 
   function basketItemHtml(f) {
     var img = SWATCH_DIR + f.familyId + '.png';
+    var imgBase = SWATCH_DIR + f.familyId;
     return (
       '<div class="basket-item">' +
+        '<picture><source srcset="' + esc(imgBase) + '.avif" type="image/avif"><source srcset="' + esc(imgBase) + '.webp" type="image/webp">' +
         '<img src="' + esc(img) + '" alt="" width="900" height="700" loading="lazy">' +
+        '</picture>' +
         '<span class="basket-item-name">' + esc(f.name) + '</span>' +
         '<span class="basket-item-structure">' + esc(f.structure) + '</span>' +
         '<button type="button" class="basket-item-remove" data-remove="' + esc(f.id) + '">Remove</button>' +

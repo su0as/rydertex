@@ -21,6 +21,7 @@
     var els = document.querySelectorAll('[data-countup]');
     if (!els.length) return;
     var fmt = function (n, comma) { return comma ? n.toLocaleString('en-US') : String(n); };
+    var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     var io = new IntersectionObserver(function (entries) {
       entries.forEach(function (en) {
         if (!en.isIntersecting) return;
@@ -28,6 +29,10 @@
         io.unobserve(el);
         var target = parseFloat(el.dataset.countup);
         var comma = el.dataset.comma === '1';
+        if (reduceMotion) {
+          el.textContent = fmt(target, comma);
+          return;
+        }
         var t0 = performance.now(), dur = 1500;
         var run = function () {
           var p = Math.min(1, (performance.now() - t0) / dur);

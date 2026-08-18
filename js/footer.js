@@ -13,7 +13,7 @@
             <circle cx="26" cy="26" r="24.5" stroke="#2F53E0" stroke-width="1.2"></circle>
             <circle cx="26" cy="26" r="1.6" fill="#2F53E0"></circle>
           </svg>
-          <img src="${base}assets/rydertex-assets/07-derived/logo-rydertex-ink.png" alt="RyderTex — Changshu Ryder Textile Co., Ltd." width="1158" height="329" loading="lazy" class="footer-logo">
+          <picture><source srcset="${base}assets/rydertex-assets/07-derived/logo-rydertex-ink.avif" type="image/avif"><source srcset="${base}assets/rydertex-assets/07-derived/logo-rydertex-ink.webp" type="image/webp"><img src="${base}assets/rydertex-assets/07-derived/logo-rydertex-ink.png" alt="RyderTex — Changshu Ryder Textile Co., Ltd." width="1158" height="329" loading="lazy" class="footer-logo"></picture>
           <p class="footer-sub">A subsidiary of<br>Landsun Textile Group</p>
         </div>
         <div class="footer-col">

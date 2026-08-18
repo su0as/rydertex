@@ -1,0 +1,24 @@
+{
+  "$schema": "RyderTex export markets, real lat/long. Node pixel positions on the world map are computed from this data at runtime by js/map-render.js — never hand-place cx/cy again. projection.frame was measured on the original, uncropped 1577x800 render of assets/rydertex-assets/06-map/world-map-real.png (magick -fuzz 5% -trim), confirmed equirectangular by its ~2:1 content aspect ratio (1437x727) and the fact that Antarctica rendered as a full-width band — Mercator cannot render Antarctica at all. The PNG has since been cropped to 1577x660 (removing the near-empty Antarctica/southern-ocean band below ~65S) for display, but projection.frame.height stays 727 — that's the pixels-per-180-degrees scale constant, not the visible canvas height, and must not be rescaled to the crop or every latitude will shift.",
+  "image": { "width": 1577, "height": 660 },
+  "projection": {
+    "type": "equirectangular",
+    "frame": { "x0": 55, "y0": 32, "width": 1437, "height": 727 },
+    "lonRange": [-180, 180],
+    "latRange": [90, -90]
+  },
+  "origin": { "key": "changshu", "name": "Changshu, Jiangsu", "lat": 31.65, "lon": 120.75 },
+  "markets": [
+    { "key": "usa", "name": "USA", "city": "Los Angeles", "lat": 33.74, "lon": -118.27 },
+    { "key": "europe", "name": "Europe", "city": "Rotterdam", "lat": 51.95, "lon": 4.14 },
+    { "key": "india", "name": "India", "city": "Chennai", "lat": 13.08, "lon": 80.27 },
+    { "key": "sri-lanka", "name": "Sri Lanka", "city": "Colombo", "lat": 6.93, "lon": 79.84 },
+    { "key": "vietnam", "name": "Vietnam", "city": "Ho Chi Minh City", "lat": 10.82, "lon": 106.63 },
+    { "key": "cambodia", "name": "Cambodia", "city": "Phnom Penh", "lat": 11.55, "lon": 104.92 },
+    { "key": "bangladesh", "name": "Bangladesh", "city": "Chittagong", "lat": 22.34, "lon": 91.83 },
+    { "key": "egypt", "name": "Egypt", "city": "Alexandria", "lat": 31.20, "lon": 29.92 },
+    { "key": "jordan", "name": "Jordan", "city": "Aqaba", "lat": 29.53, "lon": 35.00 },
+    { "key": "turkey", "name": "Turkey", "city": "Izmir", "lat": 38.42, "lon": 27.14 },
+    { "key": "china", "name": "China", "city": null, "lat": 31.65, "lon": 120.75, "sameAsOrigin": true }
+  ]
+}

@@ -78,6 +78,25 @@
       "status": "provisional"
     },
     {
+      "id": "02c-heather-jersey-viscose-tencel",
+      "name": "Heather Jersey — Viscose/Tencel 200",
+      "family": "Heather Jersey",
+      "familyId": "02-heather-jersey",
+      "structure": "Single knit",
+      "composition": "70% Viscose / 30% TENCEL™ Modal",
+      "fibres": ["Viscose", "Tencel"],
+      "gsm": 200,
+      "gauge": "28 GG",
+      "width": "34\"",
+      "finish": "Standard wash",
+      "endUse": ["Tee", "Loungewear"],
+      "certifications": ["OEKO-TEX"],
+      "moq": "500 kg",
+      "leadTime": "20–25 days",
+      "dyeHouse": "Unit 1 · Shuangchen",
+      "status": "provisional"
+    },
+    {
       "id": "03a-brushed-solid-cotton-poly",
       "name": "Brushed Solid — Cotton/Poly 280",
       "family": "Brushed Solid",

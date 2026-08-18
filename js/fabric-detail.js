@@ -1,4 +1,4 @@
-// Fabric spec-sheet page. Reads data/fabrics.json (24 SKUs across 12
+// Fabric spec-sheet page. Reads data/fabrics.json (25 SKUs across 12
 // families). ?fabric=<sku-id> deep-links to a specific construction; the
 // family swatch picker switches family (landing on that family's first
 // SKU), and the construction picker switches between a family's SKUs.
@@ -14,7 +14,7 @@
   // the original 12-family copy. Specs themselves now come from fabrics.json.
   var FAMILY_META = {
     '01-stripe-yarn-dye': { name: 'Yarn-Dye Stripe', body: 'Stripes knitted from pre-dyed yarn rather than printed after the fact, so the colour goes right through the loop and survives wash after wash.', endUseImages: ['apparel-tee-taupe.png', 'apparel-knit-crop-jogger-set.png'] },
-    '02-heather-jersey': { name: 'Heather Jersey', body: 'Melange jersey built from heather yarn spun in-house. The lightest family on the floor and the one that absorbs order spikes most easily.', endUseImages: ['apparel-tee-sand.png', 'apparel-bikeshort-tee-set-mint.jpeg'] },
+    '02-heather-jersey': { name: 'Heather Jersey', body: 'Melange jersey built from sourced heather yarn. The lightest family on the floor and the one that absorbs order spikes most easily.', endUseImages: ['apparel-tee-sand.png', 'apparel-bikeshort-tee-set-mint.jpeg'] },
     '03-brushed-solid-warm': { name: 'Brushed Solid', body: 'Solid knit taken through raising and brushing for a warm, dry surface. Common route for mid-weight sweatshirting.', endUseImages: ['apparel-fleece-sweatshirt-grey.jpeg', 'apparel-hoodie-charcoal.png'] },
     '04-solid-cool': { name: 'Tricot', body: 'Smooth warp-knit face with controlled stretch, dyed in Unit 2 alongside the nylon programme.', endUseImages: ['apparel-windbreaker-white.jpeg', 'apparel-knit-crop-jogger-set.png'] },
     '05-interlock-solid': { name: 'Interlock', body: 'Dense double-knit construction with a clean face on both sides. Scales to 20,000 kg a day on the double knit lines.', endUseImages: ['apparel-bikeshort-tee-set-mint.jpeg', 'apparel-tee-taupe.png'] },
@@ -40,6 +40,8 @@
   var els = {
     crumb: document.getElementById('crumb-name'),
     img: document.getElementById('detail-img'),
+    imgAvif: document.getElementById('detail-img-avif'),
+    imgWebp: document.getElementById('detail-img-webp'),
     picker: document.getElementById('swatch-picker'),
     note: document.getElementById('detail-note'),
     structure: document.getElementById('detail-structure'),
@@ -58,7 +60,8 @@
     var f = FABRICS.find(function (x) { return x.id === currentId; }) || FABRICS[0];
     currentId = f.id;
     var meta = FAMILY_META[f.familyId] || { name: f.family, body: '', endUseImages: [] };
-    var img = SWATCH_DIR + f.familyId + '.png';
+    var imgBase = SWATCH_DIR + f.familyId;
+    var img = imgBase + '.png';
     var familyIdx = FAMILY_ORDER.indexOf(f.familyId);
     var no = String(familyIdx + 1).padStart(2, '0') + ' / 12';
 
@@ -66,6 +69,8 @@
     els.crumb.textContent = f.name;
     els.img.src = img;
     els.img.alt = 'Swatch fan of ' + meta.name + ' knitted fabric produced by RyderTex.';
+    if (els.imgAvif) els.imgAvif.srcset = imgBase + '.avif';
+    if (els.imgWebp) els.imgWebp.srcset = imgBase + '.webp';
     els.note.textContent = 'Swatch images are real mill samples · family ' + no;
     els.structure.textContent = f.structure;
     els.name.textContent = f.name;
@@ -76,7 +81,7 @@
     els.picker.innerHTML = FAMILY_ORDER.map(function (fid) {
       var rep = familyFabrics(fid)[0];
       var active = fid === f.familyId;
-      return '<button type="button" data-pick-family="' + esc(fid) + '" class="' + (active ? 'active' : '') + '" title="' + esc(FAMILY_META[fid].name) + '" style="opacity:' + (active ? '1' : '.55') + '"><img src="' + SWATCH_DIR + esc(fid) + '.png" alt="' + esc(FAMILY_META[fid].name) + '" width="900" height="700" loading="lazy"></button>';
+      return '<button type="button" data-pick-family="' + esc(fid) + '" class="' + (active ? 'active' : '') + '" title="' + esc(FAMILY_META[fid].name) + '" style="opacity:' + (active ? '1' : '.55') + '"><picture><source srcset="' + SWATCH_DIR + esc(fid) + '.avif" type="image/avif"><source srcset="' + SWATCH_DIR + esc(fid) + '.webp" type="image/webp"><img src="' + SWATCH_DIR + esc(fid) + '.png" alt="' + esc(FAMILY_META[fid].name) + '" width="900" height="700" loading="lazy"></picture></button>';
     }).join('');
 
     // Construction picker — the SKUs within this family.
@@ -107,7 +112,8 @@
 
     els.enduse.innerHTML = meta.endUseImages.map(function (p) {
       var caption = p.replace('apparel-', '').replace(/\.(png|jpeg)$/, '').replace(/-/g, ' ');
-      return '<figure class="mosaic-item"><img src="' + A + '04-apparel/' + p + '" alt="Garment made from RyderTex knitted fabric." style="aspect-ratio:4/5" width="600" height="700" loading="lazy"><figcaption>' + esc(caption) + '</figcaption></figure>';
+      var pBase = p.replace(/\.(png|jpe?g)$/, '');
+      return '<figure class="mosaic-item"><picture><source srcset="' + A + '04-apparel/' + pBase + '.avif" type="image/avif"><source srcset="' + A + '04-apparel/' + pBase + '.webp" type="image/webp"><img src="' + A + '04-apparel/' + p + '" alt="Garment made from RyderTex knitted fabric." style="aspect-ratio:4/5" width="600" height="700" loading="lazy"></picture><figcaption>' + esc(caption) + '</figcaption></figure>';
     }).join('');
 
     var jsonld = document.getElementById('product-jsonld');

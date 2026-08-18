@@ -36,7 +36,7 @@
           <div class="lang-switch">
             <span class="lang-active">EN</span>
             <span class="lang-sep">/</span>
-            <button type="button" class="lang-zh" title="中文 copy pending" disabled>中文</button>
+            <span class="lang-zh" title="中文 copy pending">中文</span>
           </div>
           <a href="${base}contact/" class="header-cta">Request a sample</a>
         </div>
