@@ -267,9 +267,12 @@ body.page-home .site-header:not(.scrolled) .nav-toggle span{background:#F4F2EE}
 .tag-chip{font-family:'JetBrains Mono',ui-monospace,monospace;font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:#4A4F57;border:1px solid rgba(13,14,16,.14);padding:8px 11px}
 
 /* Marks wall (brand logos) */
-.marks-wall{display:grid;grid-template-columns:repeat(auto-fit,minmax(136px,1fr));gap:1px;background:rgba(13,14,16,.14);border:1px solid rgba(13,14,16,.14)}
-.marks-tile{background:#F4F2EE;display:grid;place-items:center;padding:34px 22px;min-height:112px;opacity:.5;transition:opacity .4s cubic-bezier(.16,1,.3,1),background .4s}
-.marks-tile:hover{opacity:1;background:#FFFFFF}
+.marks-wall{display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:rgba(13,14,16,.14);border:1px solid rgba(13,14,16,.14)}
+.marks-tile{background:#F4F2EE;display:grid;place-items:center;padding:34px 22px;min-height:112px;transition:background .4s}
+.marks-tile:hover{background:#FFFFFF}
+@media (max-width:768px){
+  .marks-wall{grid-template-columns:repeat(2,1fr)}
+}
 .marks-tile img{max-height:34px;width:auto;max-width:100%;object-fit:contain}
 
 /* Certifications grid (compact cards) */
