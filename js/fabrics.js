@@ -8,6 +8,15 @@
   var STORAGE_KEY = 'rt-sample-basket';
   var SWATCH_DIR = '../assets/rydertex-assets/07-derived/swatch-';
 
+  // Constructions within a family share one swatch photo (SKU id convention:
+  // "01a-...", "01b-...", "02c-..."). Pan a different region of that photo
+  // per sibling (see .fabric-card-img[data-pan] in styles.css) so cards
+  // don't render as visual duplicates.
+  function panIndex(id) {
+    var m = id.match(/^\d+([a-z])/);
+    return m ? m[1].charCodeAt(0) - 97 : 0;
+  }
+
   var FILTER_DEFS = [
     { key: 'structure', label: 'Structure', values: function (f) { return [f.structure]; } },
     { key: 'fibres', label: 'Composition', values: function (f) { return f.fibres; } },
@@ -148,7 +157,7 @@
       '<article class="fabric-card">' +
         '<a href="../fabric-detail/?fabric=' + esc(f.id) + '" class="fabric-card-link">' +
           '<picture><source srcset="' + esc(imgBase) + '.avif" type="image/avif"><source srcset="' + esc(imgBase) + '.webp" type="image/webp">' +
-          '<img src="' + esc(img) + '" alt="' + esc(f.family) + ' swatch — ' + esc(f.name) + '" width="900" height="700" loading="lazy" class="fabric-card-img">' +
+          '<img src="' + esc(img) + '" alt="' + esc(f.family) + ' swatch — ' + esc(f.name) + '" width="900" height="700" loading="lazy" class="fabric-card-img" data-pan="' + panIndex(f.id) + '">' +
           '</picture>' +
         '</a>' +
         '<div class="fabric-card-body">' +
@@ -175,7 +184,7 @@
     return (
       '<div class="basket-item">' +
         '<picture><source srcset="' + esc(imgBase) + '.avif" type="image/avif"><source srcset="' + esc(imgBase) + '.webp" type="image/webp">' +
-        '<img src="' + esc(img) + '" alt="" width="900" height="700" loading="lazy">' +
+        '<img src="' + esc(img) + '" alt="" width="900" height="700" loading="lazy" data-pan="' + panIndex(f.id) + '">' +
         '</picture>' +
         '<span class="basket-item-name">' + esc(f.name) + '</span>' +
         '<span class="basket-item-structure">' + esc(f.structure) + '</span>' +

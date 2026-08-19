@@ -10,6 +10,14 @@
   var ABS_SWATCH_DIR = 'https://su0as.github.io/rydertex/assets/rydertex-assets/07-derived/swatch-';
   var DEFAULT_ID = '02a-heather-jersey-cotton';
 
+  // Constructions within a family share one swatch photo. Pan a different
+  // region of it per sibling (see [data-pan] in styles.css) so switching
+  // constructions shows a visibly different crop, not an identical photo.
+  function panIndex(id) {
+    var m = id.match(/^\d+([a-z])/);
+    return m ? m[1].charCodeAt(0) - 97 : 0;
+  }
+
   // Family-level narrative + real (non-branded) end-use photos, ported from
   // the original 12-family copy. Specs themselves now come from fabrics.json.
   var FAMILY_META = {
@@ -69,6 +77,7 @@
     els.crumb.textContent = f.name;
     els.img.src = img;
     els.img.alt = 'Swatch fan of ' + meta.name + ' knitted fabric produced by RyderTex.';
+    els.img.setAttribute('data-pan', panIndex(f.id));
     if (els.imgAvif) els.imgAvif.srcset = imgBase + '.avif';
     if (els.imgWebp) els.imgWebp.srcset = imgBase + '.webp';
     els.note.textContent = 'Swatch images are real mill samples · family ' + no;
