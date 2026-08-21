@@ -37,8 +37,27 @@
 
     var form = document.getElementById('sample-form');
     if (form) {
+      // No backend on this static site — hand off to the visitor's own mail
+      // client via mailto:, prefilled from the form. They hit send from
+      // their own account, which is a genuine email into
+      // info@rydertextiles.com.
       form.addEventListener('submit', function (e) {
         e.preventDefault();
+        var d = new FormData(form);
+        var lines = [
+          'Company: ' + (d.get('company') || ''),
+          'Email: ' + (d.get('email') || ''),
+          'Fabric type: ' + (d.get('fabric') || ''),
+          'Target GSM: ' + (d.get('gsm') || ''),
+          'Quantity: ' + (d.get('qty') || ''),
+          'Market: ' + (d.get('market') || '')
+        ];
+        var subject = 'Sample request — ' + (d.get('company') || d.get('name') || 'RyderTex');
+        var body = 'From: ' + (d.get('name') || '') + '\n\n' + lines.join('\n');
+        var mailto = 'mailto:info@rydertextiles.com'
+          + '?subject=' + encodeURIComponent(subject)
+          + '&body=' + encodeURIComponent(body);
+        window.location.href = mailto;
         document.getElementById('sample-sent-notice').hidden = false;
       });
     }

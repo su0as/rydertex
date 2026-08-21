@@ -1,6 +1,9 @@
 // Contact page: reads the fabric-library basket (SKU ids) from localStorage,
 // looks up names against data/fabrics.json, and shows them as context chips.
-// Also stubs the sample-request form submit (no backend — see /draft-status.html).
+// The form has no backend (static GitHub Pages site), so submit builds a
+// mailto: link from the field values and hands off to the visitor's own
+// mail client — they hit send from their own account, which is a genuine
+// email into info@rydertextiles.com.
 (function () {
   'use strict';
 
@@ -11,6 +14,7 @@
   }
 
   var basketIds = [];
+  var basketNames = [];
   try {
     var raw = localStorage.getItem('rt-sample-basket');
     if (raw) basketIds = JSON.parse(raw);
@@ -27,6 +31,7 @@
           })
           .filter(Boolean);
         if (!names.length) return;
+        basketNames = names;
         var panel = document.getElementById('basket-panel-lite');
         var chips = document.getElementById('basket-chips');
         chips.innerHTML = names.map(function (name) {
@@ -39,6 +44,24 @@
 
   document.getElementById('contact-form').addEventListener('submit', function (e) {
     e.preventDefault();
+    var form = e.target;
+    var d = new FormData(form);
+    var lines = [
+      'Company: ' + (d.get('company') || ''),
+      'Email: ' + (d.get('email') || ''),
+      'Fabric type: ' + (d.get('fabric') || ''),
+      'Target GSM: ' + (d.get('gsm') || ''),
+      'Quantity: ' + (d.get('qty') || ''),
+      'Market: ' + (d.get('market') || ''),
+      'Notes: ' + (d.get('notes') || '')
+    ];
+    if (basketNames.length) lines.push('Fabrics of interest: ' + basketNames.join(', '));
+    var subject = 'Sample request — ' + (d.get('company') || d.get('name') || 'RyderTex');
+    var body = 'From: ' + (d.get('name') || '') + '\n\n' + lines.join('\n');
+    var mailto = 'mailto:info@rydertextiles.com'
+      + '?subject=' + encodeURIComponent(subject)
+      + '&body=' + encodeURIComponent(body);
+    window.location.href = mailto;
     document.getElementById('sent-notice').hidden = false;
   });
 })();
