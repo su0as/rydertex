@@ -35,8 +35,6 @@
         <div class="header-right">
           <div class="lang-switch">
             <span class="lang-active">EN</span>
-            <span class="lang-sep">/</span>
-            <span class="lang-zh" title="中文 copy pending">中文</span>
           </div>
           <a href="${base}contact/" class="header-cta">Request a sample</a>
         </div>
