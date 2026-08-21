@@ -22,7 +22,7 @@
         </div>
         <div class="footer-col">
           <span class="footer-label">Contact</span>
-          <a href="mailto:info@rydertex.com.cn" class="footer-link-bright">info@rydertex.com.cn</a>
+          <a href="mailto:info@rydertextiles.com" class="footer-link-bright">info@rydertextiles.com</a>
           <a href="https://rydertextiles.com" class="footer-link-dim">rydertextiles.com</a>
           <span class="footer-label" style="margin-top:8px">Language</span>
           <span><span class="lang-active">EN</span> <span class="lang-sep">/</span> <span class="lang-zh-pending">中文 pending</span></span>
